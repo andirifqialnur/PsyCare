@@ -59,10 +59,34 @@
           </li>
 
         </ul> 
-      </div>
-      <a href="<?= base_url('Auth/register')?>" class="btn btn-b-n" role="button" data-bs-toggle="register" data-bs-target="#register_form">Register</a>
-
-      
-
+    </div>
+    <li class="nav-item dropdown no-arrow">
+        <a class="nav-link dropdown-toggle" href="<?= base_url('Dashboard');?>" id="userDropdown" role="button"
+          data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <img class="rounded-circle me-3" src="https://dummyimage.com/40x40/ced4da/6c757d" alt="..." />
+          <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+        </a>
+        <!-- Dropdown - User Information -->
+        <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
+          aria-labelledby="userDropdown">
+          <a class="dropdown-item" href="<?= base_url('Dashboard');?>">
+            <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
+              Profile
+          </a>
+          <a class="dropdown-item" href="<?= base_url('Dashboard');?>">
+            <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
+              Settings
+          </a>
+          <a class="dropdown-item" href="<?= base_url('Dashboard');?>">
+            <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
+              Activity Log
+          </a>
+          <div class="dropdown-divider"></div>
+          <a href="<?= base_url ('Auth');?>" class="dropdown-item" data-toggle="modal" data-target="#logoutModal">
+            <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+              Logout
+          </a>
+        </div>
+      </li> 
   </div>
 </nav>

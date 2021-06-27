@@ -24,5 +24,5 @@
 
 </head>
 
-<body class="bg-gradient-primary"></body>
+<body class="bg-gradient-success"></body>
 

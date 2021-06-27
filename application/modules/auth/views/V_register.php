@@ -4,7 +4,9 @@
             <div class="card-body p-0">
                 <!-- Nested Row within Card Body -->
                 <div class="row">
-                    <div class="col-lg-5 d-none d-lg-block bg-register-image"></div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <img src="<?= base_url ('assets/img/register.jpg');?>" alt="" class="img-a img-fluid">
+                    </div>
                     <div class="col-lg-7">
                         <div class="p-5">
                             <div class="text-center">
@@ -14,14 +16,14 @@
                             <form class="user" method="post" action="<?= base_url('Auth/register');?>">
 
                                 <div class="form-group">
-                                <label for="password2"> Name </label>
-                                    <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('name')?>">
+                                <label for="name"> Name </label>
+                                    <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('name');?>">
                                     <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
                                 </div>
 
                                 <div class="form-group">
-                                    <label for="password2"> Email </label>
-                                    <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= set_value('email')?>">
+                                    <label for="email"> Email </label>
+                                    <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= set_value('email');?>">
                                     <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                                 </div>
 
@@ -48,7 +50,7 @@
                                     </select>
                                 </div>
 
-                                <button type="submit" class="btn btn-primary btn-user btn-block">
+                                <button type="submit" class="btn btn-success btn-user btn-block">
                                     Register
                                 </button>
 
@@ -63,7 +65,7 @@
 
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="<?= base_url('Auth'); ?>">Already have an account? Login!</a>
+                                <a class="small" href="<?= base_url('Auth');?>">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>
