@@ -10,32 +10,65 @@ class Dashboard extends MY_Controller {
 
     function index(){
 
-        $this->load->view('Template/dash_header');
-        $this->load->view('Template/dash_bar');
-        $this->load->view('V_dashboard');
-        $this->load->view('Template/dash_footer');
-
-    }
-
-    public function userData(){
-
-        $data['user'] = $this->M_userData->getAllUser();
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
 
         $this->load->view('Template/dash_header', $data);
-        $this->load->view('Template/dash_bar');
-        $this->load->view('V_userData', $data);
+        $this->load->view('Template/dash_bar', $data);
+        $this->load->view('V_dashboard', $data);
         $this->load->view('Template/dash_footer');
 
     }
+
+    public function adminData() {
+        $datauser['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
+        $data['user'] = $this->M_userData->getAllUser();
+
+        $this->load->view('Template/dash_header', $datauser);
+        $this->load->view('Template/dash_bar', $datauser);
+        $this->load->view('V_adminData', $data);
+        $this->load->view('Template/dash_footer');
+    }
+
+    public function doctorData(){
+        $datauser['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
+        $data['user'] = $this->M_userData->getAllUser();
+
+        $this->load->view('Template/dash_header', $datauser);
+        $this->load->view('Template/dash_bar', $datauser);
+        $this->load->view('V_doctorData', $data);
+        $this->load->view('Template/dash_footer');
+    }
+
+    public function patientData(){
+        $datauser['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
+        $data['user'] = $this->M_userData->getAllUser();
+
+        $this->load->view('Template/dash_header', $datauser);
+        $this->load->view('Template/dash_bar', $datauser);
+        $this->load->view('V_patientData', $data);
+        $this->load->view('Template/dash_footer');
+    }
+
+    // public function userData(){
+
+    //     $datauser['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
+    //     $data['user'] = $this->M_userData->getAllUser();
+
+    //     $this->load->view('Template/dash_header', $datauser);
+    //     $this->load->view('Template/dash_bar', $datauser);
+    //     $this->load->view('V_userData', $data);
+    //     $this->load->view('Template/dash_footer');
+
+    // }
 
     public function formEdit($id) {
 
+        // $datauser['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
         $data['user'] = $this->M_userData->getUserById($id);
-        $data['title'] = 'Edit Data';
 
         $this->load->view('Template/dash_header', $data);
         $this->load->view('Template/dash_bar');
-        $this->load->view('V_edit', $data);
+        $this->load->view('V_edit');
         $this->load->view('Template/dash_footer');
 
     }
@@ -43,14 +76,14 @@ class Dashboard extends MY_Controller {
     public function Edited() {
 
         $this->M_userData->Update();
-        redirect('Dashboard/userData');
+        redirect('Dashboard');
 
     }
 
     public function Deleted($id) {
 
         $this->M_userData->Delete($id);
-        redirect('Dashboard/userData');
+        redirect('Dashboard');
 
     }
 }

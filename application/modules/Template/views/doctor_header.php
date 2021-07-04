@@ -40,22 +40,22 @@
       <div class="navbar-collapse collapse justify-content-center" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('Home'); ?>">Home</a>
+            <a class="nav-link" href="<?= base_url('D_Home'); ?>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="<?= base_url('Home/about'); ?>" data-bs-toggle="tab">About</a>
+            <a class="nav-link " href="<?= base_url('D_Home/about'); ?>" data-bs-toggle="tab">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="<?= base_url('Home/test'); ?>" data-bs-toggle="tab">PsyTest</a>
+            <a class="nav-link " href="<?= base_url('D_Home/test'); ?>" data-bs-toggle="tab">PsyTest</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="<?= base_url('Home/event'); ?>" data-bs-toggle="tab">Event</a>
+            <a class="nav-link " href="<?= base_url('D_Home/event'); ?>" data-bs-toggle="tab">Event</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="<?= base_url('Home/discussForm'); ?>" data-bs-toggle="tab">Discuss Form</a>
+            <a class="nav-link " href="<?= base_url('D_Home/discussForm'); ?>" data-bs-toggle="tab">Discuss Form</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link " href="<?= base_url('Home/contact'); ?>" data-bs-toggle="tab">Contact</a>
+            <a class="nav-link " href="<?= base_url('D_Home/contact'); ?>" data-bs-toggle="tab">Contact</a>
           </li>
 
         </ul> 

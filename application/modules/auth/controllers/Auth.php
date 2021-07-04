@@ -53,17 +53,8 @@ class Auth extends MY_Controller {
                         $this->session->set_userdata($data);
                         redirect('Dashboard');
 
-                    } else if ( $user['role_id'] == 2 ) {
-
-                        // $data = [
-                        //     'email' => $user['email']
-                        // ];
-
-                        // $this->session->set_userdata($data);
-                        redirect('Home');
-
                     } else {
-                        redirect('D_Home');
+                        redirect('Home');
                     }
 
                 } else {

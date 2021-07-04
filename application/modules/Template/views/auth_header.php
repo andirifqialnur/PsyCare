@@ -18,10 +18,15 @@
 
     <!-- Custom styles for this template-->
     <link href="<?= base_url('assets/css/dash_login2.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/dash_login.css'); ?>" rel="stylesheet">
+    <link href="<?= base_url('assets/css/for_dash.css'); ?>" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
 
     <!-- JavaScript Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/boostrap@5.0.1/dist/js/boostrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
-
+    <script src="https://cdn.datatables.net/1.10.25/js/jquery.dataTables.min.js"></script>
+    
+    
 </head>
 
 <body class="bg-gradient-success"></body>
