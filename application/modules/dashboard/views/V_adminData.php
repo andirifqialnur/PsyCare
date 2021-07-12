@@ -2,12 +2,21 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Tables</h1>
-<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank"
-        href="https://datatables.net">official DataTables documentation</a>.</p>
-
-<!-- DataTales Example -->
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+            For more information about DataTables, please visit the <a target="_blank"
+                href="https://datatables.net">official DataTables documentation</a>.</p>
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="UserData">User Data</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Admin Data</li>
+            </ol>
+        </nav>
+    </div>
+</div>
+                    <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <h6 class="m-0 font-weight-bold text-primary">Admin's Data</h6>
@@ -44,7 +53,16 @@
                                                     <a href="" class="btn btn-info" data-toggle="modal" data-target="#detailmodal">Detail</a>
                                                     <a href="<?= base_url()?>Dashboard/formEdit/<?= $users['id'] ?>" class="btn btn-primary">Edit</a>
                                                     <a href="" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">Delete</a>
-
+                                                </td>
+                                            </tr>
+                                        <?php endforeach; ?>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                
+                
                                                     <!-- Delete toggle -->
                                                     <div id="deletemodal" class="modal fade" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
                                                         <div class="modal-dialog" role="document">
@@ -161,15 +179,6 @@
                                                         </div>
                                                     </div>
                                                     <!-- end edit toggle -->
-                                                </td>
-                                            </tr>
-                                        <?php endforeach; ?>
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
-                    </div>
-                
 
                 
 

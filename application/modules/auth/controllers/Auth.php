@@ -31,6 +31,7 @@ class Auth extends MY_Controller {
         }
     }
 
+    
     private function check_login(){
         
         $email= $this->input->post('email');
@@ -39,52 +40,51 @@ class Auth extends MY_Controller {
         $user = $this->db->get_where('user', ['email' => $email])->row_array();
 
         if ( $user ) {
-
+            
             if ( $user ) {
-
-                if ( password_verify($password, $user['password']) ) {
-
+                
+                if ( password_verify( $password, $user['password']) ) {
+                    
                     if ( $user['role_id'] == 1 ) {
-
+                        
                         $data = [
-                            'email' => $user['email']
+                            'email' => $user['email'],
+                            // 'role_id' => $user['role_id']
                         ];
-
+                        
                         $this->session->set_userdata($data);
                         redirect('Dashboard');
 
                     } else {
-                        redirect('Home');
+                        redirect('Home/userhome');
                     }
 
                 } else {
-
+                    
                     $this->session->set_flashdata('message', 
                     '<div class="alert alert-danger alert-dismissible fade show" role="alert"> 
-                        <strong>Galat!</strong> Wrong Password.
+                    <strong>Galat!</strong> Wrong Password.
                     </div>');
-                        
+                    
                     redirect('Auth');
                 }
-
+                
             } else {
                 $this->session->set_flashdata('message', 
                 '<div class="alert alert-danger alert-dismissible fade show" role="alert"> 
-                    <strong>Galat!</strong> Your Account Unactive.
+                <strong>Galat!</strong> Your Account Unactive.
                 </div>');
                 redirect('Auth');
             }
-
+            
         } else {
             $this->session->set_flashdata('message', 
             '<div class="alert alert-danger alert-dismissible fade show" role="alert"> 
-                <strong>Galat!</strong> Email Unregistered.
+            <strong>Galat!</strong> Email Unregistered.
             </div>');
             redirect('Auth');
         }
     }
-	
-    // <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 
 	public function register(){
         

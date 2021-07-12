@@ -1,272 +1,91 @@
-<main id="main">
-    <!-- ======= Intro Single ======= -->
-    <section class="intro-single">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8">
-            <div class="title-single-box">
-              <h1 class="title-single">We Give a Better Solution</h1>
-            </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="<?= base_url('Home'); ?>">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  About
-                </li>
-              </ol>
-            </nav>
-          </div>
-        </div>
-      </div>
-    </section><!-- End Intro Single-->
-    <!-- ======= About Section ======= -->
-    <section class="section-about">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12 position-relative">
-            <div class="about-img-box">
-              <img src="<?= base_url ('assets/img/slide-about-1.jpg');?>" alt="" class="img-fluid">
-            </div>
-            <div class="sinse-box">
-              <h3 class="sinse-title">PsyCare
-                <span></span>
-                <br> Since 2021
-              </h3>
-              <p>Psychology</p>
-            </div>
-          </div>
-          <div class="col-md-12 section-t8 position-relative">
-            <div class="row">
-              <div class="col-md-6 col-lg-5">
-                <img src="<?= base_url('assets/img/about-2.jpg');?>" alt="" class="img-fluid">
-              </div>
-              <div class="col-lg-2  d-none d-lg-block position-relative">
-                <div class="title-vertical d-flex justify-content-start">
-                  <span>PsyCare Exclusive Service</span>
+  <!-- About section one-->
+    <section class="position-relative pt-5 mt-5" id="scroll-target">
+        <div class="container px-5 my-5">
+          <ol class="breadcrumb d-flex justify-content-lg-end">
+            <li class="breadcrumb-item">
+              <a class="text-decoration-none" href="<?=base_url('Home')?>">Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">
+              About
+            </li>
+          </ol>
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6"><img class="img-fluid rounded mb-5 mb-lg-0" src="<?=base_url('assets/svg/undraw_About_us_page_re_2jfm.svg')?>" /></div>
+                <div class="col-lg-6">
+                  <div class="px-5 my-5 text-center text-xl-start">
+                    <h2 class="display-5 fw-bolder">About Us</h2>
+                    <p class="lead fw-normal text-muted mb-0">
+                      We provide services that are certainly very good for your mental health. 
+                      We are here to hear all your complaints and we are here to help you out and even solve your problems. Join us and feel the benefits. </p>
+                  </div>
                 </div>
-              </div>
-              <div class="col-md-6 col-lg-5 section-md-t3">
-                <div class="title-box-d">
-                  <h3 class="title-d">Sed
-                    <span class="color-d">porttitor</span> lectus
-                    <br> nibh.
-                  </h3>
-                </div>
-                <p class="color-text-a">
-                  Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget
-                  consectetur sed, convallis
-                  at tellus. Praesent sapien massa, convallis a pellentesque nec, egestas non nisi. Vestibulum
-                  ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Donec velit
-                  neque, auctor sit amet aliquam vel, ullamcorper sit amet ligula.
-                </p>
-                <p class="color-text-a">
-                  Sed porttitor lectus nibh. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus.
-                  Mauris blandit aliquet
-                  elit, eget tincidunt nibh pulvinar a. Vivamus magna justo, lacinia eget consectetur sed,
-                  convallis at tellus.
-                </p>
-              </div>
             </div>
-          </div>
         </div>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+			<path fill="#ffffff" fill-opacity="1" 
+				d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,80C960,64,1056,96,1152,
+				96C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,
+				320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+			</path>
+		</svg>
+    </section>
+    <!-- About section one -->
+    <section id="s1" class="">
+      <div class="container-fluid pb-5">
+          <div class="row justify-content-center">
+              <div class="col-lg-8 col-xxl-6">
+                  <div class="text-center my-5">
+                      <h1 class="fw-bolder mb-3">Our mission is to make building websites easier for everyone.</h1>
+                      <p class="lead fw-normal text-muted mb-4">Start Bootstrap was built on the idea that quality, functional website templates and themes should be available to everyone. Use our open source, free products, or support us by purchasing one of our premium products or services.</p>
+                      <a class="btn btn-lg" href="#scroll-target" style="color: #ffff">Read our story</a>
+                  </div>
+              </div>
+          </div>
       </div>
     </section>
-    <!-- =======Team Section ======= -->
-    <section class="section-agents section-t8">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12">
-            <div class="title-wrap d-flex justify-content-between">
-              <div class="title-box">
-                <h2 class="title-a">Meet Our Team</h2>
-              </div>
+    <!-- About section two-->
+    <section id="s2" class="">
+        <div class="container pb-5 mb-5">
+            <div class="row gx-5 align-items-center">
+                <div class="col-lg-6 order-first order-lg-last"><img class="img-fluid rounded mb-5 mb-lg-0" src="<?=base_url('assets/svg/undraw_Sync_re_492g.svg')?>" alt="..." /></div>
+                <div class="col-lg-6">
+                    <h2 class="fw-bolder">Upgrading to mobile app version</h2>
+                    <p class="lead fw-normal text-muted mb-0">We are working for the next level so you can enjoy with us not just from the website but also from your smartphone. 
+                      So, what are you waiting for come and join with us</p>
+                </div>
             </div>
-          </div>
         </div>
-        <div class="row">
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="<?= base_url('assets/img/agent-7.jpg');?>" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="agent-single.html" class="link-two">Margaret Sotillo
-                        <br> Escala</a>
-                    </h3>
-                  </div>
-                </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
+    </section>
+    <!-- Team members section-->
+    <section id="team" class="team mt-5 pt-5">
+        <div class="container my-5">
+            <div class="text-center">
+                <h2 class="fw-bolder">Team mates</h2>
+                <p class="lead fw-normal text-muted mb-5">Dedicated to quality and your success</p>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="<?= base_url('assets/img/agent-6.jpg');?>" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="<?= base_url('Home/about'); ?>" class="link-two">Stiven Spilver
-                        <br> Darw</a>
-                    </h3>
-                  </div>
+            <div class="row gx-5 row-cols-1 row-cols-sm-2 row-cols-xl-4 justify-content-center">
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"/>
+                        <h5 class="fw-bolder">Andi Rifqial Nur</h5>
+                        <div class="fst-italic text-muted">Founder &amp; CEO</div>
+                    </div>
                 </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
+                <div class="col mb-5 mb-5 mb-xl-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"/>
+                        <h5 class="fw-bolder">Muh. Syahrir</h5>
+                        <div class="fst-italic text-muted">CFO</div>
+                    </div>
                 </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-dribbble" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
+                <div class="col mb-5 mb-5 mb-sm-0">
+                    <div class="text-center">
+                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/150x150/ced4da/6c757d"/>
+                        <h5 class="fw-bolder">St. Rabiatul Ad'wiah Yusri</h5>
+                        <div class="fst-italic text-muted">Operations Manager</div>
+                    </div>
                 </div>
-              </div>
             </div>
-          </div>
-          <div class="col-md-4">
-            <div class="card-box-d">
-              <div class="card-img-d">
-                <img src="<?= base_url('assets/img/agent-5.jpg');?>" alt="" class="img-d img-fluid">
-              </div>
-              <div class="card-overlay card-overlay-hover">
-                <div class="card-header-d">
-                  <div class="card-title-d align-self-center">
-                    <h3 class="title-d">
-                      <a href="<?= base_url ('Home/about');?>" class="link-two">Emma Toledo
-                        <br> Cascada</a>
-                    </h3>
-                  </div>
-                </div>
-                <div class="card-body-d">
-                  <p class="content-d color-text-a">
-                    Sed porttitor lectus nibh, Cras ultricies ligula sed magna dictum porta two.
-                  </p>
-                  <div class="info-agents color-a">
-                    <p>
-                      <strong>Phone: </strong> +54 356 945234
-                    </p>
-                    <p>
-                      <strong>Email: </strong> agents@example.com
-                    </p>
-                  </div>
-                </div>
-                <div class="card-footer-d">
-                  <div class="socials-footer d-flex justify-content-center">
-                    <ul class="list-inline">
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-facebook" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-twitter" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-instagram" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-linkedin" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                      <li class="list-inline-item">
-                        <a href="#" class="link-one">
-                          <i class="bi bi-dribbble" aria-hidden="true"></i>
-                        </a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section><!-- End About Section-->
-  </main><!-- End #main -->
+    </section>
+</main>

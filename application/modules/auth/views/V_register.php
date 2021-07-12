@@ -28,22 +28,23 @@
                                     <div class="form-group row">
                                         <!-- first pass -->
                                         <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="password"> Password </label>
+                                            <label for="password" > Password </label>
                                             <input type="password" class="form-control form-control-user" id="password" placeholder="Enter Your Password" name="password">
                                             <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
                                         </div>
                                         <!-- second pass -->
                                         <div class="col-sm-6">
-                                            <label for="password2"> Re-Enter Password </label>
+                                            <label for="password2" > Re-Enter Password </label>
                                             <input type="password" class="form-control form-control-user" id="password2" placeholder="Repeat Password" name="password2">
                                         </div>  
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="as"> Login As </label>
+                                        <label for="as">Login sebagai: </label>
                                         <select name="as" id="as" class="form-control">
-                                            <option value="1">Patient</option>
-                                            <option value="2">Doctor</option>
+                                            <option value="1">Admin</option>
+                                            <option value="2">Patient</option>
+                                            <option value="3">Doctor</option>
                                         </select>
                                     </div>
 

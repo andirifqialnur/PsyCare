@@ -2,10 +2,20 @@
 <div class="container-fluid">
 
 <!-- Page Heading -->
-<h1 class="h3 mb-2 text-gray-800">Tables</h1>
-<p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-    For more information about DataTables, please visit the <a target="_blank"
-        href="https://datatables.net">official DataTables documentation</a>.</p>
+<div class="card shadow mb-4">
+    <div class="card-body">
+        <h1 class="h3 mb-2 text-gray-800">Tables</h1>
+        <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
+            For more information about DataTables, please visit the <a target="_blank"
+                href="https://datatables.net">official DataTables documentation</a>.</p>
+        <nav aria-label="breadcrumb" role="navigation">
+            <ol class="breadcrumb">
+                <li class="breadcrumb-item"><a href="UserData">User Data</a></li>
+                <li class="breadcrumb-item active" aria-current="page">Doctor Data</li>
+            </ol>
+        </nav>
+    </div>
+</div>
 
 <!-- DataTales Example -->
                     <div class="card shadow mb-4">
@@ -169,16 +179,6 @@
                             </div>
                         </div>
                     </div>
-                    
-<!-- Footer -->
-<footer class="sticky-footer bg white">
-    <div class="container my-auto">
-        <div class="copyright text-center my-auto">
-            <span>Copyright © Your Website 2020</span>
-        </div>
-    </div>
-</footer>
-<!-- End Footer -->
                 
 
                 

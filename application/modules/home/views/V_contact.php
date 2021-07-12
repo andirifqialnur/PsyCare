@@ -1,153 +1,131 @@
-<main id="main">
-    <!-- ======= Intro Single ======= -->
-    <section class="intro-single">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 col-lg-8">
-            <div class="title-single-box">
-              <h1 class="title-single">Contact US</h1>
-              <span class="color-text-a">Aut voluptas consequatur unde sed omnis ex placeat quis eos. Aut natus officia corrupti qui autem fugit consectetur quo. Et ipsum eveniet laboriosam voluptas beatae possimus qui ducimus. Et voluptatem deleniti. Voluptatum voluptatibus amet. Et esse sed omnis inventore hic culpa.</span>
+  <!-- Start discuss -->
+    <section class="">
+        <div class="position-relative overflow-hidden pt-5 mt-5 text-center">
+            <div class="container px-5 my-5">
+                <ol class="breadcrumb d-flex justify-content-lg-end">
+                    <li class="breadcrumb-item">
+                      <a class="text-decoration-none" href="<?= base_url('Home')?>">Home</a>
+                    </li>
+                    <li class="breadcrumb-item active" aria-current="page">
+                      Contact
+                    </li>
+                  </ol>
+                <div class="row gx-5 align-items-center justify-content-center">
+                    <div class="col-lg-8 col-xl-7 col-xxl-6">
+                        <div class="my-5 text-center text-xl-start">
+                            <h1 class="display-5 fw-bolder text-black mb-2">Contact</h1>
+                            <p class="lead fw-normal text-black-50 mb-4">Tell us your Problem</p>
+                        </div>
+                    </div>
+                    <div class="col-xl-5 col-xxl-6 d-none d-xl-block text-center">
+                        <img src="<?= base_url('assets/svg/undraw_contact_us_15o2.svg')?>" class="d-block w-100">
+                    </div>
+            
+                </div>
             </div>
-          </div>
-          <div class="col-md-12 col-lg-4">
-            <nav aria-label="breadcrumb" class="breadcrumb-box d-flex justify-content-lg-end">
-              <ol class="breadcrumb">
-                <li class="breadcrumb-item">
-                  <a href="<?= base_url('Home');?>">Home</a>
-                </li>
-                <li class="breadcrumb-item active" aria-current="page">
-                  Contact
-                </li>
-              </ol>
-            </nav>
-          </div>
+            <div class="product-device shadow-sm d-none d-md-block"></div>
+            <div class="product-device product-device-2 shadow-sm d-none d-md-block"></div>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#ffffff" fill-opacity="1" 
+                    d="M0,160L48,144C96,128,192,96,288,106.7C384,117,480,171,576,165.3C672,160,768,96,864,80C960,64,1056,96,1152,
+                    96C1248,96,1344,64,1392,48L1440,32L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,
+                    320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z">
+                </path>
+            </svg>
         </div>
-      </div>
-    </section><!-- End Intro Single-->
-    <!-- ======= Contact Single ======= -->
-    <section class="contact">
-      <div class="container">
-        <div class="row">
-          <div class="col-sm-12">
-            <div class="contact-map box">
-              <div id="map" class="contact-map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3022.1422937950147!2d-73.98731968482413!3d40.75889497932681!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25855c6480299%3A0x55194ec5a1ae072e!2sTimes+Square!5e0!3m2!1ses-419!2sve!4v1510329142834" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
-              </div>
+        <div class="container px-5 my-5">
+          
+            <!-- Contact form-->
+            <div class="bg-light rounded-3 pt-5 px-4 px-md-5 mb-5 mt-5">
+              <div class="text-center mb-5">
+                
+                <div class="text-center mb-5">
+                    <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-envelope"></i></div>
+                    <h1 class="fw-bolder">Get in touch</h1>
+                </div>
+                <div class="row gx-5 justify-content-center">
+                    <div class="col-lg-8 col-xl-6">
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- * * SB Forms Contact Form * *-->
+                        <!-- * * * * * * * * * * * * * * *-->
+                        <!-- This form is pre-integrated with SB Forms.-->
+                        <!-- To make this form functional, sign up at-->
+                        <!-- https://startbootstrap.com/solution/contact-forms-->
+                        <!-- to get an API token!-->
+                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                            <!-- Name input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
+                                <label for="name">Full name</label>
+                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
+                            </div>
+                            <!-- Email address input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="email" type="email" placeholder="name@example.com" data-sb-validations="required,email" />
+                                <label for="email">Email address</label>
+                                <div class="invalid-feedback" data-sb-feedback="email:required">An email is required.</div>
+                                <div class="invalid-feedback" data-sb-feedback="email:email">Email is not valid.</div>
+                            </div>
+                            <!-- Phone number input-->
+                            <div class="form-floating mb-3">
+                                <input class="form-control" id="phone" type="tel" placeholder="(123) 456-7890" data-sb-validations="required" />
+                                <label for="phone">Phone number</label>
+                                <div class="invalid-feedback" data-sb-feedback="phone:required">A phone number is required.</div>
+                            </div>
+                            <!-- Message input-->
+                            <div class="form-floating mb-3">
+                                <textarea class="form-control" id="message" type="text" placeholder="Enter your message here..." style="height: 10rem" data-sb-validations="required"></textarea>
+                                <label for="message">Message</label>
+                                <div class="invalid-feedback" data-sb-feedback="message:required">A message is required.</div>
+                            </div>
+                            <!-- Submit success message-->
+                            <!---->
+                            <!-- This is what your users will see when the form-->
+                            <!-- has successfully submitted-->
+                            <div class="d-none" id="submitSuccessMessage">
+                                <div class="text-center mb-3">
+                                    <div class="fw-bolder">Form submission successful!</div>
+                                    To activate this form, sign up at
+                                    <br />
+                                    <a href="https://startbootstrap.com/solution/contact-forms"></a>
+                                </div>
+                            </div>
+                            <!-- Submit error message-->
+                            <!---->
+                            <!-- This is what your users will see when there is-->
+                            <!-- an error submitting the form-->
+                            <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
+                            <!-- Submit Button-->
+                            <div class="pb-5 d-grid"><button class="btn btn-lg disabled" id="submitButton" type="submit" style="color: #ffff">Submit</button></div>
+                            <!-- find out how to able and disable submit button -->
+                        </form>
+                    </div>
+                    
+                </div>
             </div>
-          </div>
-          <div class="col-sm-12 section-t8">
-            <div class="row">
-              <div class="col-md-7">
-                <form action="forms/contact.php" method="post" role="form" class="php-email-form">
-                  <div class="row">
-                    <div class="col-md-6 mb-3">
-                      <div class="form-group">
-                        <input type="text" name="name" class="form-control form-control-lg form-control-a" placeholder="Your Name" required>
-                      </div>
-                    </div>
-                    <div class="col-md-6 mb-3">
-                      <div class="form-group">
-                        <input name="email" type="email" class="form-control form-control-lg form-control-a" placeholder="Your Email" required>
-                      </div>
-                    </div>
-                    <div class="col-md-12 mb-3">
-                      <div class="form-group">
-                        <input type="text" name="subject" class="form-control form-control-lg form-control-a" placeholder="Subject" required>
-                      </div>
-                    </div>
-                    <div class="col-md-12">
-                      <div class="form-group">
-                        <textarea name="message" class="form-control" name="message" cols="45" rows="8" placeholder="Message" required></textarea>
-                      </div>
-                    </div>
-                    <div class="col-md-12 my-3">
-                      <div class="mb-3">
-                        <div class="loading">Loading</div>
-                        <div class="error-message"></div>
-                        <div class="sent-message">Your message has been sent. Thank you!</div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 text-center">
-                      <button type="submit" class="btn btn-a">Send Message</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="col-md-5 section-md-t3">
-                <div class="icon-box section-b2">
-                  <div class="icon-box-icon">
-                    <span class="bi bi-envelope"></span>
-                  </div>
-                  <div class="icon-box-content table-cell">
-                    <div class="icon-box-title">
-                      <h4 class="icon-title">Say Hello</h4>
-                    </div>
-                    <div class="icon-box-content">
-                      <p class="mb-1">Email.
-                        <span class="color-a">contact@example.com</span>
-                      </p>
-                      <p class="mb-1">Phone.
-                        <span class="color-a">+54 356 945234</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="icon-box section-b2">
-                  <div class="icon-box-icon">
-                    <span class="bi bi-geo-alt"></span>
-                  </div>
-                  <div class="icon-box-content table-cell">
-                    <div class="icon-box-title">
-                      <h4 class="icon-title">Find us in</h4>
-                    </div>
-                    <div class="icon-box-content">
-                      <p class="mb-1">
-                        Manhattan, Nueva York 10036,
-                        <br> EE. UU.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div class="icon-box">
-                  <div class="icon-box-icon">
-                    <span class="bi bi-share"></span>
-                  </div>
-                  <div class="icon-box-content table-cell">
-                    <div class="icon-box-title">
-                      <h4 class="icon-title">Social networks</h4>
-                    </div>
-                    <div class="icon-box-content">
-                      <div class="socials-footer">
-                        <ul class="list-inline">
-                          <li class="list-inline-item">
-                            <a href="#" class="link-one">
-                              <i class="bi bi-facebook" aria-hidden="true"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#" class="link-one">
-                              <i class="bi bi-twitter" aria-hidden="true"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#" class="link-one">
-                              <i class="bi bi-instagram" aria-hidden="true"></i>
-                            </a>
-                          </li>
-                          <li class="list-inline-item">
-                            <a href="#" class="link-one">
-                              <i class="bi bi-linkedin" aria-hidden="true"></i>
-                            </a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </section><!-- End Contact Single-->
-  </main><!-- End #main -->
+        <!-- Contact cards-->
+        <div class="row gx-5 row-cols-2 row-cols-lg-4 py-5">
+            <div class="col">
+                <div class="feature text-white rounded-3 mb-3"></div>
+                <div class="h5 mb-2">Chat with us</div>
+                <p class="text-muted mb-0">Chat live with one of our support specialists.</p>
+            </div>
+            <div class="col">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-people"></i></div>
+                <div class="h5">Ask the community</div>
+                <p class="text-muted mb-0">Explore our community forums and communicate with other users.</p>
+            </div>
+            <div class="col">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-question-circle"></i></div>
+                <div class="h5">Support center</div>
+                <p class="text-muted mb-0">Browse FAQ's and support articles to find solutions.</p>
+            </div>
+            <div class="col">
+                <div class="feature bg-primary bg-gradient text-white rounded-3 mb-3"><i class="bi bi-telephone"></i></div>
+                <div class="h5">Call us</div>
+                <p class="text-muted mb-0">Call us during normal business hours at <a class="text-decoration-none" href="">(555) 892-9403.</a> </p>
+            </div>
+        </div>
+    </section>
+  <!-- End discuss -->

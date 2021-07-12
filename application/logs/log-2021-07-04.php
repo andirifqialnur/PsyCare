@@ -115,3 +115,64 @@ ERROR - 2021-07-04 16:36:07 --> 404 Page Not Found: /index
 ERROR - 2021-07-04 16:36:25 --> 404 Page Not Found: /index
 ERROR - 2021-07-04 16:36:25 --> 404 Page Not Found: /index
 ERROR - 2021-07-04 16:36:31 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:45:45 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:45:45 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:50:15 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:50:15 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:50:46 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\Template\views\dash_bar.php 123
+ERROR - 2021-07-04 16:50:46 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 195
+ERROR - 2021-07-04 16:50:46 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 199
+ERROR - 2021-07-04 16:50:46 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 203
+ERROR - 2021-07-04 16:50:47 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:56:36 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\Template\views\dash_bar.php 123
+ERROR - 2021-07-04 16:56:36 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 195
+ERROR - 2021-07-04 16:56:36 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 199
+ERROR - 2021-07-04 16:56:36 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 203
+ERROR - 2021-07-04 16:56:36 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 16:56:36 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:05:04 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\Template\views\dash_bar.php 123
+ERROR - 2021-07-04 17:05:04 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 18
+ERROR - 2021-07-04 17:05:04 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 22
+ERROR - 2021-07-04 17:05:04 --> Severity: Warning --> Trying to access array offset on value of type null C:\xampp\htdocs\PsyCare\application\modules\dashboard\views\V_edit.php 26
+ERROR - 2021-07-04 17:05:04 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:05:43 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:05:46 --> 404 Page Not Found: ../modules/Dashboard/controllers/Dashboard/charts.html
+ERROR - 2021-07-04 17:05:50 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:05:50 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:13:40 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:13:40 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:18:37 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:18:37 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:13 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:13 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:44 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:51 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:51 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:52 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:23:52 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:28:48 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:28:48 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:39:51 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:39:51 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:39:52 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:10 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:16 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:16 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:16 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:17 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:17 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:40:18 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:00 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:01 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:05 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:05 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:47:05 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:14 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:14 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:14 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:28 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:28 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:28 --> 404 Page Not Found: /index
+ERROR - 2021-07-04 17:50:33 --> 404 Page Not Found: /index
