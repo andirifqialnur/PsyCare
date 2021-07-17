@@ -8,7 +8,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 	  <link rel="stylesheet" href="<?= base_url('assets/css/style.css')?>">
-    <link rel="stylesheet" href="<?= base_url('assets/vendor/fontawesome-free-5/css/all.min.css')?>">
+    <link href="<?= base_url('assets/vendor/fontawesome-free-5/css/all.min.css') ?>" rel="stylesheet" type="text/css">
 
 <title>PsyCare</title>
   </head>
@@ -44,7 +44,7 @@
                         <a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="me-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'];?></span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('assets/img/40x40 user.jpg')?>">
+                            <img class="img-profile rounded-circle" src="<?= base_url('./assets/images/') . $user['image']; ?> " style="width: 20px; height: 20px;  ">
                         </a>
                         <ul class="dropdown-menu px-3 py-3 mx-3 my-3">
                             <li><a class="dropdown-item" href="<?= base_url('Home/editprofile')?>"><i class="text-muted fas fw fa-user pe-2"></i>Profile</a></li>

@@ -21,7 +21,7 @@
     <div class="container px-4 px-lg-5 mt-5">
         <div class="row gx-4 gx-lg-5 row-cols-2 row-cols-md-3 row-cols-xl-4 justify-content-center">
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat1.jpg')?>"/>
                     <!-- Product details-->
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Sale badge-->
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Sale badge-->
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
@@ -92,7 +92,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat4.jpg')?>" />
                     <!-- Product details-->
@@ -119,7 +119,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Sale badge-->
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
@@ -141,7 +141,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat6.jpg')?>" />
                     <!-- Product details-->
@@ -160,7 +160,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Sale badge-->
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
@@ -190,7 +190,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat8.jpg')?>" />
                     <!-- Product details-->
@@ -217,7 +217,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat9.jpg')?>" />
                     <!-- Product details-->
@@ -245,7 +245,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat10.jpg')?>" />
@@ -273,7 +273,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat11.jpg')?>" />
@@ -301,7 +301,7 @@
                 </div>
             </div>
             <div class="col mb-5">
-                <div class="card h-100">
+                <div class="card h-100 shadow border-0">
                     <div class="badge text-white position-absolute" style="top: 0.5rem; right: 0.5rem">Discount</div>
                     <!-- Product image-->
                     <img class="card-img-top" src="<?= base_url('assets/img/chat12.jpg')?>" />

@@ -41,7 +41,7 @@
                                         <option value="2">Patient</option>
                                         <option value="3">Doctor</option>
                                     </select>
-                                </div>
+                                </div>  
                                 <button type="submit" class="btn btn-primary">Submit</button>
                             </form>
                             <hr>

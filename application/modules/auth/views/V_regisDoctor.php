@@ -1,5 +1,5 @@
 <!-- <div class="container"> -->
-    <div class="row justify-content-center">
+<div class="row justify-content-center">
         <div class="col-lg-5">
             <div class="card o-hidden border-0 shadow-lg my-5">
                 <div class="card-body p-0">
@@ -8,15 +8,21 @@
                         <div class="col-lg">
                             <div class="p-5">
                                 <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
+                                    <h1 class="h4 text-gray-900 mb-4">Create an Account</h1>
                                 </div>
 
-                                <form method="post" action="<?= base_url('Auth/register');?>" enctype="multipart/form-data">
+                                <form class="user" method="post" action="<?= base_url('Auth/registerDoctor');?>">
 
                                     <div class="form-group">
-                                    <label for="name"> Name </label>
-                                        <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('name');?>">
+                                        <label for="name"> Name </label>
+                                        <input type="name" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('Name');?>">
                                         <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="username"> Username </label>
+                                        <input type="username" class="form-control form-control-user" id="username" placeholder="Enter Your Username" name="username" value="<?= set_value('Name');?>">
+                                        <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
 
                                     <div class="form-group">
@@ -39,26 +45,15 @@
                                         </div>  
                                     </div>
 
-                                    <div class="form-group">
-                                        <label>Input profile image</label><br>
-                                        <input type="file" name="image" id="image"><br>
-                                        <?= form_error('image', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
-
                                     <button type="submit" class="btn btn-success btn-user btn-block">
                                         Register
                                     </button>
-
                                 </form>
 
                                 <hr>
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('Auth');?>">Already have an account? Login!</a>
+                                    <a class="small" href="<?= base_url('Auth/doctor');?>">Already have an account? Login!</a>
                                 </div>
-                                <div class="text-center">
-                                    <a class="small" href="<?= base_url('Auth/registerDoctor');?>">Register as Doctor</a>
-                                </div>
-                                
                             </div>
                         </div>
                     </div>

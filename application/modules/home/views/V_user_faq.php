@@ -33,9 +33,11 @@
             </path>
         </svg>
     </div>
+    
     <div class="container px-5 my-5">
         <div class="row gx-5">
             <div class="mb-5 mb-5 mb-5 col-xl-8">
+
                 <!-- FAQ Accordion 1-->
                 <h2 class="fw-bolder mb-3">Account &amp; Billing</h2>
                 <div class="accordion mb-5" id="accordionExample">

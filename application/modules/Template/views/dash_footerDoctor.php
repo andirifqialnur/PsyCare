@@ -49,11 +49,11 @@
                                 <span aria-hidden="true">×</span>
                         </button>
                 </div>
-                <div class="modal-body">Are you sure want to delete <h5 id="name"></h5>?<br>
+                <div class="modal-body">Are you sure want to delete ?<br>
                     You can restore the data when you delete it</div>
                 <div class="modal-footer">
                     <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-danger" href="<?= base_url()?>Dashboard/Deleted/<?= $users['id'] ?>">Yes</a>
+                    <a class="btn btn-danger" href="<?= base_url()?>Dashboard/Deleted/<?= $doctors['id'] ?>">Yes</a>
                 </div>
             </div>
         </div>
@@ -80,8 +80,7 @@
                                 <div class="card-body">
                                     <h5 id="name" class="card-title"></h5>
                                     <p id="email" class="card-text"></p>
-                                    <p class="card-text"><small class="text-muted">Member Since <span id="date_time"></span></small></p>
-                                    <!-- <?= date('d F Y', $users['date_time']);?> -->
+                                    <p class="card-text"><small class="text-muted">Doctor Member Since <span id="date_time"></span></small></p>
                                 </div>
                             </div>
                         </div>
@@ -110,12 +109,12 @@
                                 <form class="user" method="post" action="<?= base_url('Dashboard/Edited');?>">
                                     <div class="form-group">
                                         <label for="name"> Name </label>
-                                        <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= $users['name']?>">
+                                        <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= $doctors['name']?>">
                                         <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
                                     <div class="form-group">
                                         <label for="email"> Email </label>
-                                        <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= $users['email']?>">
+                                        <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= $doctors['email']?>">
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
                                     <div class="form-group row">
@@ -140,7 +139,7 @@
                                     <!-- <button type="submit" class="btn btn-success btn-user btn-block">
                                         Submit
                                     </button> -->
-                                    <a href="<?= base_url()?>Dashboard/formEdit/<?= $users['id'] ?>" type="submit" class="btn btn-success btn-user btn-block">Submit</a>
+                                    <a href="<?= base_url()?>Dashboard/formEdit/<?= $doctors['id'] ?>" type="submit" class="btn btn-success btn-user btn-block">Submit</a>
                                 </form>
                             </div>
                         </div>
@@ -153,49 +152,7 @@
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('assets/vendor/jquery/jquery-3.5.1.min.js');?>"></script>
 
-    <!-- Load data modal detail for admin-->
-    <script>
-        $('.bdetail').click(function(){
-
-            id = $(this).attr('id');
-                // alert(id);
-
-            $.post("<?= base_url().'Dashboard/adminDataById/' ?>" + id, {}, function(output){
-                //output harus json
-                output = JSON.parse(output);
-
-                $("#name").text(output.name);
-                $("#email").text(output.email);
-                $("#date_time").text(output.date_time);
-
-                $("#detailmodal").modal("show");
-            });
-            return false;
-        });
-    </script>
-
-    <!-- Load data modal detail for patient-->
-    <script>
-        $('.bdetail').click(function(){
-
-            id = $(this).attr('id');
-                // alert(id);
-
-            $.post("<?= base_url().'Dashboard/patientDataById/' ?>" + id, {}, function(output){
-                //output harus json
-                output = JSON.parse(output);
-
-                $("#name").text(output.name);
-                $("#email").text(output.email);
-                $("#date_time").text(output.date_time);
-
-                $("#detailmodal").modal("show");
-            });
-            return false;
-        });
-    </script>
-
-    <!-- Load data modal detail for doctor -->
+    <!-- Load data modal detail -->
     <script>
         $('.bdetail').click(function(){
 

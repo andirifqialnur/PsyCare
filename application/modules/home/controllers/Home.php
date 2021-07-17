@@ -5,6 +5,8 @@ class Home extends MY_Controller {
 
 	public function __construct(){ 
 		parent::__construct();
+
+		$this->load->model('M_home');
 		
 	}
 // HOME SECTION
@@ -73,7 +75,7 @@ class Home extends MY_Controller {
 		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
 
 		$this->load->view('Template/Header_user', $data);
-		$this->load->view('V_user_home');
+		$this->load->view('V_user_home', $data);
 		$this->load->view('Template/Footer_user', $data);
 	}
 
@@ -153,6 +155,12 @@ class Home extends MY_Controller {
 		$this->load->view('V_user_editprofile', $data);
 		$this->load->view('Template/Footer_user', $data);
 	}
+
+
+	public function userEdited( $id ) {
+        $this->M_home->updateUserProfile();
+        redirect('Home/editprofile');         
+    }
 
 //End Content
 // END USER SECTION

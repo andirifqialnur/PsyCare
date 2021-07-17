@@ -17,55 +17,22 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Administrator
-            </div>
-
-            <!-- Nav Item - Dashboard -->
-            <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard'); ?>">
-                    <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span>
-                </a>
-            </li>
-
-            <!-- Nav Item - User Data -->
-            <li class="nav-item">
-                <a class="nav-link collapsed" href="" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
-                    <i class="fas fa-fw fa-table"></i>
-                    <span>Users Data</span>
-                </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
-                    data-parent="#accordionSidebar">
-                    <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="<?= base_url('Dashboard/adminData'); ?>">Admin's Data</a>
-                        <a class="collapse-item" href="<?= base_url('Dashboard/doctorData'); ?>">Doctor's Data</a>
-                        <a class="collapse-item" href="<?= base_url('Dashboard/patientData'); ?>">Patient's Data</a>
-                    </div>
-                </div>
-            </li>
-
-            <hr class="sidebar-divider">
-
-            <!-- Heading -->
-            <div class="sidebar-heading">
                 Activity
             </div>
-
-            <!-- Nav Item - Event -->
+            
+            <!-- Nav Item - Schedule Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/addEvent');?>">
-                    <i class="fas fa-fw fa-calendar-week"></i>
-                    <span>Event</span>
+                <a class="nav-link" href="<?= base_url('Dashboard/schedule');?>">
+                    <i class="fas fa-fw fa-calendar-day"></i>
+                    <span>Schedule</span>
                 </a>
             </li>
-            
+
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/updatedInfo');?>">
+                <a class="nav-link" href="<?= base_url('Dashboard/articleDoctor');?>">
                     <i class="fas fa-fw fa-info"></i>
-                    <span>Info</span>
+                    <span>Add Article</span>
                 </a>
             </li>
             
@@ -73,7 +40,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Dashboard/updatedTest');?>">
                     <i class="fas fa-fw fa-file-alt"></i>
-                    <span>Test</span>
+                    <span>Add Test</span>
                 </a>
             </li>
 
@@ -87,7 +54,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Dashboard/profile');?>">
                     <i class="fas fa-fw fa-user"></i>
-                    <span>Profile</span>
+                    <span>Edit Profile</span>
                 </a>
             </li>
 
@@ -141,7 +108,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="<?= base_url('Dashboard');?>" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'];?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $doctor['name'];?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/lollipop.jpg');?>">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -181,7 +148,7 @@
                             <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
                             <div class="modal-footer">
                                 <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-success" href="<?= base_url ('Auth');?>">Logout</a>
+                                <a class="btn btn-success" href="<?= base_url ('Auth/doctor');?>">Logout</a>
                             </div>
                         </div>
                     </div>

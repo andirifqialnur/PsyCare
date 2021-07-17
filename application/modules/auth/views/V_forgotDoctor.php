@@ -32,10 +32,7 @@
                                     </form>
                                     <hr>
                                     <div class="text-center">
-                                        <a class="small" href="<?= base_url('Auth/register'); ?>">Create an Account!</a>
-                                    </div>
-                                    <div class="text-center">
-                                        <a class="small" href="<?= base_url('Auth'); ?>">Login Again</a>
+                                        <a class="small" href="<?= base_url('Auth/doctor'); ?>">Login Again</a>
                                     </div>
                                 </div>
                             </div>
