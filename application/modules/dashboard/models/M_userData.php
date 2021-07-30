@@ -1,7 +1,11 @@
 <?php
 defined('BASEPATH') or exit('No direct script access allowed');
 class M_userData extends CI_Model {
-// Admin Session
+    public function __construct(){
+		parent::__construct();  
+		// $this->db = $this->load->database('db', TRUE);
+	}
+// Admin Session get all id
     // admin data
     public function getAllAdmin() {
 
@@ -9,7 +13,7 @@ class M_userData extends CI_Model {
     }
     public function getAdminById( $id ) {
 
-        return $this->db->get_where('admin', ['id' => $id])->row();
+        return $this->db->get_where('admin', ['id' => $id])->row_array();
     }
 
     // patient data
@@ -18,7 +22,8 @@ class M_userData extends CI_Model {
         return $this->db->get('user')->result_array();
     }
     public function getUserById( $id ) {
-        return $this->db->get_where('user', ['id' => $id])->row();
+
+        return $this->db->get_where('user', ['id' => $id])->row_array();
     }
     
     // doctor data
@@ -28,10 +33,19 @@ class M_userData extends CI_Model {
     }
     public function getDoctorById( $id ) {
 
-        return $this->db->get_where('doctor', ['id' => $id])->row();
+        return $this->db->get_where('doctor', ['id' => $id])->row_array();
     }
 
-    // Admin session edit
+
+    // event data
+    public function getAllEvent() {
+        return $this->db->get('event')->result_array();
+    }
+    public function geteventById( $id ) {
+        return $this->db->get_where('event', ['id' => $id])->row_array();
+    }
+
+// Admin session edit
     public function updateUser() {
 
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
@@ -78,11 +92,11 @@ class M_userData extends CI_Model {
         ];
 
         $this->db->where('id', $this->input->post('id'));
-        $this->db->update('user', $data);
+        $this->db->update('doctor', $data);
 
     }
 
-    // Admin session delete
+// Admin session delete
     //delete user
     public function deleteUser($id) {
         $this->db->delete('user', ['id' => $id]);
@@ -96,4 +110,95 @@ class M_userData extends CI_Model {
         $this->db->delete('admin', ['id' => $id]);
     }
 
+
+// Admin Calculate
+    //patient
+    public function calculatePatients() {
+
+        $query = $this->db->get('user');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {
+
+            return 0;
+        }
+    }
+    //doctor
+    public function calculateDoctors() {
+
+        $query = $this->db->get('doctor');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {
+
+            return 0;
+        }
+    }
+    // admin
+    public function calculateAdmins() {
+
+        $query = $this->db->get('admin');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {
+
+            return 0;
+        }
+    }
+    // event
+    public function calculateEvents() {
+
+        $query = $this->db->get('event');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {
+
+            return 0;
+        }
+    }
+    // test
+    public function calculateTests() {
+
+        $query = $this->db->get('test');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {
+
+            return 0;
+        }
+    }
+    // article
+    public function calculateArticles() {
+
+        $query = $this->db->get('article');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {    
+
+            return 0;
+        }
+    }
+
+// join table
+    
 }
+
+

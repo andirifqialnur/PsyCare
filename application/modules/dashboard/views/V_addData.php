@@ -53,7 +53,7 @@
                         </h6>
                     </div>
                     <div class="card-body pt-3">
-                    <form action="<?= base_url('Dashboard/userEdited/')?> method="post">
+                    <form action="<?= base_url('Dashboard/addData/')?>" method="post">
                         <input type="hidden" name="id">
                             <div class="form-group pb-4">
                                 <label for="name" class="text-dark">Nama</label>
@@ -64,11 +64,6 @@
                                 <label for="email" class="text-dark">Email</label>
                                 <input type="text" class="mt-2 form-control form-control-user fst-italic" id="email" name="email" placeholder="Your Email..." >
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
-                            </div>
-                            <div class="form-group pb-4">
-                                <label for="username" class="text-dark">Username</label>
-                                <input type="text" class="mt-2 form-control form-control-user fst-italic" id="username" name="username" placeholder="Your Username..." >
-                                <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group pb-4">
                                 <label for="phonenumber" class="text-dark">Phone Number</label>
@@ -86,7 +81,7 @@
                                 <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group pb-4">
-                                <label for="password2" class="text-dark">New Password</label>
+                                <label for="password2" class="text-dark">Re-type Password</label>
                                 <input type="text" class="mt-2 form-control form-control-user fst-italic" id="password2" name="password2" placeholder="Repeat Your Password...">
                                 <?= form_error('password2', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
@@ -95,33 +90,17 @@
                                 <input type="text" class="mt-2 form-control form-control-user fst-italic" id="age" name="age" placeholder="Your Age...">
                                 <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
-
                             <div class="form-group pb-4">
-                                <label for="gender" class="text-dark">Gender</label>
-                                <div class="mt-2 d-flex" >
-                                    <div class="mr-3 custom-control custom-radio ">
-                                        <input type="radio" id="gender" name="gender" class="custom-control-input" checked="" value="1">
-                                        <label class="custom-control-label weight-400" for="gender">Male</label>
-                                    </div>
-                                    <div class="custom-control custom-radio">
-                                        <input type="radio" id="gender" name="gender" class="custom-control-input ms-auto" value="0">
-                                        <label class="custom-control-label weight-400" for="gender">Female</label>
-                                    </div>
-                                </div>
-                                <?= form_error('gender', '<small class="text-danger pl-3">', '</small>');?>
+                                <label for="keyy" class="text-dark">Key</label>
+                                <input type="text" class="mt-2 form-control form-control-user fst-italic" id="keyy" name="keyy" placeholder="Key permission">
+                                <?= form_error('keyy', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
-
                             <div class="form-group pb-4">
                                 <label for="address" class="text-dark">Address</label>
                                 <div class="mt-2 form-floating pb-4" >
                                     <textarea class="form-control fst-italic" name="address" id="address" style="height: 200px" ></textarea>
                                 </div>
                                 <?= form_error('address', '<small class="text-danger pl-3">', '</small>');?>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="img" class="text-dark">Upload Image</label><br>
-                                <input type="file" class="form" id="img" name="img">
                             </div>
 
                         <button type="submit" class="mt-5 rounded-3 btn btn-success mb-3">Submit</button>

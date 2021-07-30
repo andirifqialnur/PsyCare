@@ -18,7 +18,7 @@
 
                                     <?= $this->session->flashdata('message');?>
 
-                                    <form class="user" method="post" action="<?= base_url('Auth')?>">
+                                    <form class="user" method="post" action="<?= base_url('Auth/admin')?>">
 
                                         <div class="form-group">
                                             <label for="email"> Email </label>
@@ -36,10 +36,10 @@
                                         </div>
 
                                         <div class="form-group">
-                                            <label for="key"> Admin Veryfication </label>
+                                            <label for="keyy"> Admin Veryfication </label>
                                             <input type="key" class="form-control form-control-user"
-                                                id="key" placeholder="Enter the admin key" name="key">
-                                            <?= form_error('key', '<small class="text-danger pl-3">', '</small>');?>
+                                                id="keyy" placeholder="Enter the admin key" name="keyy">
+                                            <?= form_error('keyy', '<small class="text-danger pl-3">', '</small>');?>
                                         </div>
 
                                         <div class="form-group">
@@ -52,8 +52,6 @@
                                         <button type="submit" class="btn btn-success btn-user btn-block">
                                             Login
                                         </button>
-
-                                        <hr>
                                        
                                     </form>
                                     <hr>

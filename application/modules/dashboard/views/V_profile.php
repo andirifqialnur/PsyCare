@@ -71,15 +71,15 @@
                                     </h6>
                                 </div>
                                 <div class="card-body">
-                                <form action="<?= base_url('Dashboard/formEdit/')?><?= $user['id'] ?>" method="post">
-                                    <input type="hidden" name="id" value="<?= $user['id']; ?>">
+                                <form action="<?= base_url('Dashboard/formEdit/')?><?= $admin['id'] ?>" method="post">
+                                    <input type="hidden" name="id" value="<?= $admin['id']; ?>">
                                         <div class="form-group">
                                             <label for="name">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Your Nama..."  value="<?= $user['name'] ?>">
+                                            <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Your Nama..."  value="<?= $admin['name'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="email">Email</label>
-                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Your Email..." value="<?= $user['email'] ?>">
+                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Your Email..." value="<?= $admin['email'] ?>">
                                         </div>
                                         <div class="form-group">
                                             <label for="username">Username</label>

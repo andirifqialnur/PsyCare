@@ -14,6 +14,119 @@
       </div>
   </footer>
 
+  <!-- Edit photo profile Modal-->
+<!-- Modal -->
+<!-- <div class="modal fade" id="profilemodal" data-bs-backdrop="static" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Change Your Profile Photo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= base_url()?>Home/userProfilePhoto" method="post" enctype="multipart/form-data">
+                <input type="hidden" name="id" value="<?= $user['id'];?>">
+                <div class="text-center">
+                    <img class="img-fluid rounded-circle mb-4 px-4" src="<?= base_url('assets/photo/' . $user['image'])?>" style="width:300px; height:260px;"/>
+                    <h5 class="fw-bolder"><?= $user['name'] ?></h5>
+                    <div class="fst-italic text-muted pt-2"><?= $user['email'] ?></div>
+                    <div class="fst-italic text-muted pt-2">
+                        <p class="text-danger">Only can upload photo below 10MB</p>
+                    </div>
+                    <div class="form-group pt-4">
+                        <label class="custom-control-label form-label w-100 fw-bolder">Select file</label>
+                        <input type="file" class="custom-file-input" name="photo">
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn">Save</button>
+            </div>
+        </form>
+    </div>
+</div>
+</div> -->
+<!-- End Modal -->
+
+
+<!-- Edit data modal -->
+<!-- Modal -->
+<div class="modal fade" id="dataExist" data-bs-backdrop="static" tabindex="-1"  aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Change Your Profile Photo</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= base_url('Home/updateUserData/' . $user['id'])?>" method="post" enctype="multipart/form-data">
+                    <!-- Heading -->
+                    
+                    <div class="form-group pb-4">
+                        <label for="name">Name</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="name" name="name" placeholder="Your Name..." value="<?= $user['name']; ?>">
+                        <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="email">Email</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="email" name="email" placeholder="Your Email..." value="<?= $user['email']; ?>">
+                        <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="password">Password</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="password" name="password" placeholder="Your Password...">
+                        <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="password2">Re-type Password</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="password2" name="password2" placeholder="Repeat Your Password...">
+                        <?= form_error('password2', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="age">Age</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="age" name="age" placeholder="Your Age..." value="<?= $user['age']; ?>">
+                        <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="gender">Gender</label>
+                        <div class="mt-2 d-flex">
+                            <div class="me-3 custom-control custom-radio ">
+                                <label class="custom-control-label weight-400" for="gender">Male</label>
+                                <input type="radio" id="gender" name="gender" class="custom-control-input" value="Male">
+                            </div>
+                            <div class="custom-control custom-radio">
+                                <label class="custom-control-label weight-400" for="gender">Female</label>
+                                <input type="radio" id="gender" name="gender" class="custom-control-input ms-auto" value="Female">
+                            </div>
+                        </div>
+                        <?= form_error('gender', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="phonenumber">Phone Number</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="phonenumber" name="phonenumber" placeholder="Your Phone Number..." value="<?= $user['phonenumber']; ?>">
+                        <?= form_error('phonenumber', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="job">Job</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="job" name="job" placeholder="Your Job..." value="<?= $user['job']; ?>">
+                        <?= form_error('job', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="address">Address</label>
+                        <div class="mt-2 form-floating pb-4" >
+                            <textarea class="form-control fst-italic" name="address" id="address" style="height: 200px" value="<?= $user['address']; ?>"></textarea>
+                        </div>
+                        <?= form_error('address', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="text-end mb-3 me-4">
+                        <button type="submit" class="btn ">Save</button>
+                    </div>
+                </form>
+        </div>
+    </div>
+</div>
+<!-- End Modal -->
+
   <a class="scroll-to-top rounded" href="#page-top">
     <i class="fas fw fa-angle-up"></i>
   </a>

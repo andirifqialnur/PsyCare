@@ -19,6 +19,8 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+    
+
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -81,7 +83,6 @@
                                     <h5 id="name" class="card-title"></h5>
                                     <p id="email" class="card-text"></p>
                                     <p class="card-text"><small class="text-muted">Member Since <span id="date_time"></span></small></p>
-                                    <!-- <?= date('d F Y', $users['date_time']);?> -->
                                 </div>
                             </div>
                         </div>
@@ -93,65 +94,24 @@
             </div>
         </div>
         <!-- End Detail toggle -->
-
-        <!-- edit toggle -->
-        <div id="editmodal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-            <div class="modal-dialog" >
-                <div class="modal-content">
-                    <div class="row">
-                        <div class="col-lg">
-                            <div class="p-5">
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                                <div class="text-center">
-                                    <h1 class="h4 text-gray-900 mb-4">Edit Data</h1>
-                                </div>
-                                <form class="user" method="post" action="<?= base_url('Dashboard/Edited');?>">
-                                    <div class="form-group">
-                                        <label for="name"> Name </label>
-                                        <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= $users['name']?>">
-                                        <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="email"> Email </label>
-                                        <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= $users['email']?>">
-                                        <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
-                                    <div class="form-group row">
-                                        <div class="col-sm-6 mb-3 mb-sm-0">
-                                            <label for="password"> New Password </label>
-                                            <input type="password" class="form-control form-control-user" id="password" placeholder="Enter Your Password" name="password">
-                                            <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
-                                        </div>
-                                        <div class="col-sm-6">
-                                            <label for="password2"> Re-type New Password </label>
-                                            <input type="password" class="form-control form-control-user" id="password2" placeholder="Repeat Password" name="password2">
-                                        </div>  
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="as"> User Role </label>
-                                            <select name="as" id="as" class="form-control">
-                                                <option value="1">Admin</option>
-                                                <option value="2">Patient</option>
-                                                <option value="3">Doctor</option>
-                                            </select>
-                                    </div>
-                                    <!-- <button type="submit" class="btn btn-success btn-user btn-block">
-                                        Submit
-                                    </button> -->
-                                    <a href="<?= base_url()?>Dashboard/formEdit/<?= $users['id'] ?>" type="submit" class="btn btn-success btn-user btn-block">Submit</a>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- end edit toggle -->
+    
+    
 
     <!-- Bootstrap core JavaScript-->
     <script src="<?= base_url('assets/vendor/jquery/jquery-3.5.1.min.js');?>"></script>
+    <script src="<?= base_url('assets/vendor/ckeditor/ckeditor.js');?>"></script>
+
+    <script>
+        CKEDITOR.replace( 'fill' );
+    </script>
+    
+    <script>
+        $( '.custom-file-input' ).on('change', function() {
+            let filename = $(this).val().split('\\').pop();
+            $(this).next( '.custom-file-label' ).addClass("selected").html(filename);
+        });
+    </script>
+
 
     <!-- Load data modal detail for admin-->
     <script>

@@ -11,26 +11,20 @@
                                     <h1 class="h4 text-gray-900 mb-4">Create an Account</h1>
                                 </div>
 
-                                <form class="user" method="post" action="<?= base_url('Auth/registerDoctor');?>">
+                                <form class="user" method="post" action="<?= base_url('Auth/regisDoctor');?>" enctype="multipart/form-data">
 
                                     <div class="form-group">
                                         <label for="name"> Name </label>
-                                        <input type="name" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('Name');?>">
+                                        <input type="text" class="form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="<?= set_value('name');?>">
                                         <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
 
                                     <div class="form-group">
-                                        <label for="username"> Username </label>
-                                        <input type="username" class="form-control form-control-user" id="username" placeholder="Enter Your Username" name="username" value="<?= set_value('Name');?>">
-                                        <?= form_error('username', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
-
-                                    <div class="form-group">
                                         <label for="email"> Email </label>
-                                        <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= set_value('email');?>">
+                                        <input type="text" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= set_value('email');?>">
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
-
+                                    
                                     <div class="form-group row">
                                         <!-- first pass -->
                                         <div class="col-sm-6 mb-3 mb-sm-0">
@@ -43,6 +37,44 @@
                                             <label for="password2" > Re-Enter Password </label>
                                             <input type="password" class="form-control form-control-user" id="password2" placeholder="Repeat Password" name="password2">
                                         </div>  
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="age"> Age </label>
+                                        <input type="text" class="form-control form-control-user" id="age" placeholder="Enter Your Age" name="age" value="">
+                                        <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="phonenumber"> Phone Number </label>
+                                        <input type="text" class="form-control form-control-user" id="phonenumber" placeholder="Enter Your Phone Number" name="phonenumber" value="">
+                                        <?= form_error('phonenumber', '<small class="text-danger pl-3">', '</small>');?>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <label for="experience"> Experience </label>
+                                        <input type="text" class="form-control form-control-user" id="experience" placeholder="Enter Your Experience" name="experience" value="">
+                                        <?= form_error('experience', '<small class="text-danger pl-3">', '</small>');?>
+                                    </div>
+ 
+                                    <div class="form-group">
+                                        <label for="gender"> Gender </label>
+                                        <select name="gender" id="gender" class="form-control">
+                                            <option value="1">Male</option>
+                                            <option value="0">Female</option>
+                                        </select>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="photo"> Input Image Profile </label>
+                                        <input type="file" class="form-control form-control-user pb-5" id="photo" placeholder="Insert Your Image Profile" name="photo">
+                                        <?= form_error('photo', '<small class="text-danger pl-3">', '</small>');?>
+                                    </div>
+                                    
+                                    <div class="form-group">
+                                        <label for="quotes"> Quotes </label>
+                                        <textarea class="form-control" name="quotes" id="quotes" style="height: 200px"></textarea>
+                                        <?= form_error('quotes', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
 
                                     <button type="submit" class="btn btn-success btn-user btn-block">

@@ -52,12 +52,11 @@
                         <!-- To make this form functional, sign up at-->
                         <!-- https://startbootstrap.com/solution/contact-forms-->
                         <!-- to get an API token!-->
-                        <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                        <form id="contactForm" method="post">
                             <!-- Name input-->
                             <div class="form-floating mb-3">
                                 <input class="form-control" id="name" type="text" placeholder="Enter your name..." data-sb-validations="required" />
                                 <label for="name">Full name</label>
-                                <div class="invalid-feedback" data-sb-feedback="name:required">A name is required.</div>
                             </div>
                             <!-- Email address input-->
                             <div class="form-floating mb-3">
@@ -96,7 +95,7 @@
                             <!-- an error submitting the form-->
                             <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Error sending message!</div></div>
                             <!-- Submit Button-->
-                            <div class="pb-5 d-grid"><button class="btn btn-lg disabled" id="submitButton" type="submit" style="color: #ffff">Submit</button></div>
+                            <div class="pb-5 d-grid"><a href="<?= base_url('Auth/register')?>" class="btn btn-lg" id="submitButton" type="button" style="color: #ffff">Submit</a></div>
                             <!-- find out how to able and disable submit button -->
                         </form>
                     </div>

@@ -49,7 +49,9 @@
                                         <hr>
                                        
                                     </form>
-                                    <hr>
+                                    <div class="text-center">
+                                        <a class="small" href="<?= base_url('Auth/regisDoctor'); ?>">Create Account</a>
+                                    </div>
                                     <div class="text-center">
                                         <a class="small" href="<?= base_url('Auth/forgotDoctor'); ?>">Forgot Password?</a>
                                     </div>

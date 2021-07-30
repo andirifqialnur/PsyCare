@@ -11,7 +11,7 @@
                                     <h1 class="h4 text-gray-900 mb-4">Create an Account!</h1>
                                 </div>
 
-                                <form method="post" action="<?= base_url('Auth/register');?>" enctype="multipart/form-data">
+                                <form class="user" method="post" action="<?= base_url('Auth/register');?>" enctype="multipart/form-data">
 
                                     <div class="form-group">
                                     <label for="name"> Name </label>
@@ -24,7 +24,7 @@
                                         <input type="email" class="form-control form-control-user" id="email" placeholder="Enter Your Email" name="email" value="<?= set_value('email');?>">
                                         <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
-
+                                    
                                     <div class="form-group row">
                                         <!-- first pass -->
                                         <div class="col-sm-6 mb-3 mb-sm-0">
@@ -40,9 +40,9 @@
                                     </div>
 
                                     <div class="form-group">
-                                        <label>Input profile image</label><br>
-                                        <input type="file" name="image" id="image"><br>
-                                        <?= form_error('image', '<small class="text-danger pl-3">', '</small>');?>
+                                        <label for="photo"> Input Image Profile</label>
+                                        <input type="file" class="form-control pb-5" id="photo" placeholder="Insert Your Image Profile" name="photo">
+                                        
                                     </div>
 
                                     <button type="submit" class="btn btn-success btn-user btn-block">
@@ -56,7 +56,10 @@
                                     <a class="small" href="<?= base_url('Auth');?>">Already have an account? Login!</a>
                                 </div>
                                 <div class="text-center">
-                                    <a class="small" href="<?= base_url('Auth/registerDoctor');?>">Register as Doctor</a>
+                                    <a class="small" href="<?= base_url('Auth/regisDoctor');?>">Register as Doctor</a>
+                                </div>
+                                <div class="text-center">
+                                    <a class="small" href="<?= base_url('Auth/admin');?>">Login as admin</a>
                                 </div>
                                 
                             </div>

@@ -731,3 +731,25 @@ ERROR - 2021-07-17 16:17:27 --> 404 Page Not Found: /index
 ERROR - 2021-07-17 16:17:56 --> 404 Page Not Found: /index
 ERROR - 2021-07-17 16:17:56 --> 404 Page Not Found: /index
 ERROR - 2021-07-17 16:17:56 --> 404 Page Not Found: /index
+ERROR - 2021-07-17 20:17:52 --> Query error: Table 'psycare.users' doesn't exist - Invalid query: SELECT *
+FROM `users`
+WHERE `email` = 'dian@gmail.com'
+ LIMIT 1
+ERROR - 2021-07-17 20:17:52 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\PsyCare\system\libraries\Form_validation.php 1134
+ERROR - 2021-07-17 20:17:52 --> Severity: Error --> Uncaught TypeError: CI_Exceptions::show_exception(): Argument #1 ($exception) must be of type Exception, Error given, called in C:\xampp\htdocs\PsyCare\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\PsyCare\system\core\Exceptions.php:190
+Stack trace:
+#0 C:\xampp\htdocs\PsyCare\system\core\Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown C:\xampp\htdocs\PsyCare\system\core\Exceptions.php 190
+ERROR - 2021-07-17 20:18:43 --> Query error: Table 'psycare.users' doesn't exist - Invalid query: SELECT *
+FROM `users`
+WHERE `email` = 'apa@gmail.com'
+ LIMIT 1
+ERROR - 2021-07-17 20:18:43 --> Severity: error --> Exception: Call to a member function num_rows() on bool C:\xampp\htdocs\PsyCare\system\libraries\Form_validation.php 1134
+ERROR - 2021-07-17 20:18:43 --> Severity: Error --> Uncaught TypeError: CI_Exceptions::show_exception(): Argument #1 ($exception) must be of type Exception, Error given, called in C:\xampp\htdocs\PsyCare\system\core\Common.php on line 658 and defined in C:\xampp\htdocs\PsyCare\system\core\Exceptions.php:190
+Stack trace:
+#0 C:\xampp\htdocs\PsyCare\system\core\Common.php(658): CI_Exceptions->show_exception(Object(Error))
+#1 [internal function]: _exception_handler(Object(Error))
+#2 {main}
+  thrown C:\xampp\htdocs\PsyCare\system\core\Exceptions.php 190

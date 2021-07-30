@@ -50,8 +50,8 @@
                             <img class="card-img-top" src="<?= base_url('assets/img/event2.jpg')?>"/>
                             <div class="card-body p-4">
                                 <div class="badge bg-gradient rounded-pill mb-2">Next</div>
-                                <a class="text-decoration-none link-dark stretched-link" href="#!" data-bs-toggle="modal" data-bs-target="#eventmodal"><div class="h5 card-title mb-3 fw-bold">Your brain when you're angry</div></a>
-                                <p class="card-text mb-5">This text is a bit longer to illustrate the adaptive height of each card. Some quick example text.</p>
+                                <a class="text-decoration-none link-dark stretched-link" href="#!" data-bs-toggle="modal" data-bs-target="#eventmodal"><div class="h5 card-title mb-3 fw-bold">Where is your mind</div></a>
+                                <p class="card-text mb-5">This text is a bit longer to illustrate the adaptive height of each card.</p>
                             </div>
                             <div class="card-footer p-4 pt-0 bg-transparent border-top-0">
                                 <div class="d-flex align-items-end justify-content-between">

@@ -29,7 +29,7 @@
                     <p class="lead fw-normal text-muted mb-0">We are working for the next level so you can enjoy with us not just from the website but also from your smartphone. 
                       So, what are you waiting for come and join with us</p>
                     <div class="d-grid gap-3 pt-5 d-sm-flex justify-content-sm-center justify-content-xl-start">
-							        <a class="btn btn-lg me-sm-3" href="<?= base_url('Home/sembarang')?>" style="color: #ffff">Join Group</a>
+							        <a class="btn btn-lg me-sm-3" href="https://chat.whatsapp.com/BZxLFcnqMS7GQoihNTYxh1" style="color: #ffff">Join Group</a>
 						        </div>
                   </div>
                 </div>
@@ -48,7 +48,7 @@
                       We provide services that are certainly very good for your mental health. 
                       We are here to hear all your complaints and we are here to help you out and even solve your problems. Join us and feel the benefits. </p>
                     <div class="d-grid gap-3 pt-5 d-sm-flex justify-content-sm-center justify-content-xl-start">
-							        <a class="btn btn-lg me-sm-3" href="<?= base_url('Home/sembarang')?>" style="color: #ffff">Follow</a>
+							        <a class="btn btn-lg me-sm-3" href="https://instagram.com/___psycare" style="color: #ffff">Follow</a>
 						        </div>
                   </div>
                 </div>
@@ -65,7 +65,7 @@
                     <p class="lead fw-normal text-muted mb-0">We are working for the next level so you can enjoy with us not just from the website but also from your smartphone. 
                       So, what are you waiting for come and join with us</p>
                     <div class="d-grid gap-3 pt-5 d-sm-flex justify-content-sm-center justify-content-xl-start">
-							        <a class="btn btn-lg me-sm-3" href="<?= base_url('Home/sembarang')?>" style="color: #ffff">Join Group</a>
+							        <a class="btn btn-lg me-sm-3" href="https://t.me/psyycare" style="color: #ffff">Join Group</a>
 						        </div>
                 </div>
             </div>
@@ -83,7 +83,7 @@
                       We provide services that are certainly very good for your mental health. 
                       We are here to hear all your complaints and we are here to help you out and even solve your problems. Join us and feel the benefits. </p>
                     <div class="d-grid gap-3 pt-5 d-sm-flex justify-content-sm-center justify-content-xl-start">
-							        <a class="btn btn-lg me-sm-3" href="<?= base_url('Home/sembarang')?>" style="color: #ffff">Join Channel</a>
+							        <a class="btn btn-lg me-sm-3" href="https://discord.gg/CY5yeEvw" style="color: #ffff">Join Channel</a>
 						        </div>
                   </div>
                 </div>

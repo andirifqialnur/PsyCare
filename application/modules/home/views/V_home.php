@@ -6,7 +6,8 @@
 						<h1 class="display-5 fw-bolder text-black mb-2">PsyCare</h1>
 						<p class="lead fw-normal text-black-50 mb-4">The best solution for mental health<br>Become your best friend for every problem that you got.</p>
 						<div class="d-grid gap-3 d-sm-flex justify-content-sm-center justify-content-xl-start">
-							<a class="btn btn-lg me-sm-3" href="<?= base_url('Home/sembarang')?>" style="color: #ffff">Get Started</a>
+							<a class="btn btn-lg me-sm-3" href="<?= base_url('Auth/register')?>" style="color: #ffff">Get Started</a>
+							<a class="btn btn-lg me-sm-3" href="<?= base_url('Auth/regisDoctor')?>" style="color: #ffff;">As Doctor</a>
 						</div>
 					</div>
 				</div>

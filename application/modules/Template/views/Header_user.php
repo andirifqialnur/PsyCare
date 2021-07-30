@@ -43,11 +43,12 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="" id="userDropdown" role="button"
                             data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            <span class="me-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'];?></span>
-                            <img class="img-profile rounded-circle" src="<?= base_url('./assets/images/') . $user['image']; ?> " style="width: 20px; height: 20px;  ">
+                            <span class="me-2 d-none d-lg-inline text-gray-600 small"><?php echo $user['name']?></span>
+                            
+                            <img class="img-profile rounded-circle" src="<?= base_url('assets/photo/' . $user['image'])?>" style="width: 40px; height: 40px;">
                         </a>
                         <ul class="dropdown-menu px-3 py-3 mx-3 my-3">
-                            <li><a class="dropdown-item" href="<?= base_url('Home/editprofile')?>"><i class="text-muted fas fw fa-user pe-2"></i>Profile</a></li>
+                            <li><a class="dropdown-item" href="<?= base_url('Home/editProfile/' . $user['id'])?>"><i class="text-muted fas fw fa-user pe-2"></i>Profile</a></li>
                             <li><a class="dropdown-item" href="<?= base_url('Home/userchat')?>"><i class="text-muted fas fw fa-user-md pe-2"></i>Chat Doctor</a></li>
                             <li><a class="dropdown-item" href="<?= base_url('Home/userevent')?>"><i class="text-muted fas fw fa-calendar-week pe-2"></i>Event Registered</a></li>
                             <li><hr class="dropdown-divider"></li>

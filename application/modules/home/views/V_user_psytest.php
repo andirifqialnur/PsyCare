@@ -14,36 +14,13 @@
                 <p class="lead fw-normal text-muted mb-0">Check your Personality</p>
             </div>
             <div class="row gx-5">
-                <div class="col-lg-6">
-                    <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest1.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none" href="#!">Myer Test<br></a>
+              <?php foreach ($test as $tests) : ?>
+                <div class="col-lg-4">
+                    <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/test/' . $tests['thumbnail'])?>'); height: 400px;">
+                        <a class="ps-5 h3 fw-bolder text-decoration-none" href=""><?= $tests['testname']?><br></a>
                     </div>
                 </div>
-                <div class="col-lg-6">
-                    <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest2.jpg')?>'); height: 400px;">
-                      <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">Pauli & Kraeplin Test</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest3.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">DISC Test</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest4.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">Wartegg Test</a>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                  <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest5.jpg')?>'); height: 400px;">
-                      <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">SSCT Test</a>
-                  </div>
-              </div>
-              <div class="col-lg-6">
-                <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest1.jpg')?>'); height: 400px;">
-                    <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">Logic Test</a>
-                </div>
-            </div>
+                <?php endforeach; ?>
             </div>
         </div>
     </section>

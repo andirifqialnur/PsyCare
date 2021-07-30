@@ -45,11 +45,17 @@
                                         <button type="submit" class="btn btn-success btn-user btn-block">
                                             Login
                                         </button>
-
-                                        <hr>
                                        
                                     </form>
+                                    
                                     <hr>
+                                    
+                                    <div class="text-center">
+                                        <a type="button" class="mb-4 btn btn-primary btn-user btn-block" href="<?= base_url('Auth/doctor'); ?>">Login as Doctor</a>
+                                    </div>
+                                    <div class="text-center">
+                                        <a type="button" class="mb-4 btn btn-danger btn-user btn-block rounded-3" href="<?= base_url('Auth/admin'); ?>">Login as Admin</a>
+                                    </div>
                                     <div class="text-center">
                                         <a class="small" href="<?= base_url('Auth/forgot_pass'); ?>">Forgot Password?</a>
                                     </div>

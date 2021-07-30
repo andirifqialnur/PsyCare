@@ -55,7 +55,7 @@
 
             <!-- Nav Item - Event -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/addEvent');?>">
+                <a class="nav-link" href="<?= base_url('Event');?>">
                     <i class="fas fa-fw fa-calendar-week"></i>
                     <span>Event</span>
                 </a>
@@ -71,7 +71,7 @@
             
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/updatedTest');?>">
+                <a class="nav-link" href="<?= base_url('Test');?>">
                     <i class="fas fa-fw fa-file-alt"></i>
                     <span>Test</span>
                 </a>
@@ -93,7 +93,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item pb-3">
-                <a class="nav-link" href="<?= base_url('Home')?>">
+                <a href="" class="nav-link" data-target="#logoutModal" data-toggle="modal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Log Out</span>
                 </a>
@@ -141,7 +141,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="<?= base_url('Dashboard');?>" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $user['name'];?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $admin['name']?></span>
                                 <img class="img-profile rounded-circle" src="<?= base_url('assets/img/lollipop.jpg');?>">
                             </a>
                             <!-- Dropdown - User Information -->
@@ -167,25 +167,5 @@
 
                 </nav>
                 <!-- End of Topbar -->
-
-                <!-- logoutModal toggle -->
-                <div id="logoutModal" class="modal fade" tabindex="-1" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                                <button class="close" type="button" data-dismiss="modal" aria-label="Close">
-                                    <span aria-hidden="true">×</span>
-                                </button>
-                            </div>
-                            <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                            <div class="modal-footer">
-                                <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                                <a class="btn btn-success" href="<?= base_url ('Auth');?>">Logout</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- End logoutModal toggle -->
 
                 

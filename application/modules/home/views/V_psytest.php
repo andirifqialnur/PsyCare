@@ -16,27 +16,27 @@
             <div class="row gx-5">
                 <div class="col-lg-6">
                     <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest1.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none" href="#!">Myer Test<br></a>
+                        <a class="ps-5 h3 fw-bolder text-decoration-none" href="<?= base_url('Auth/register')?>">Myer Test<br></a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest5.jpg')?>'); height: 400px;">
-                      <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">Pauli & Kraeplin Test</a>
+                      <a class="ps-5 h3 fw-bolder text-decoration-none " href="<?= base_url('Auth/register')?>">Pauli & Kraeplin Test</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest3.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">DISC Test</a>
+                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="<?= base_url('Auth/register')?>">DISC Test</a>
                     </div>
                 </div>
                 <div class="col-lg-6">
                     <div class="bg-white mb-5 d-flex align-items-center rounded-3 mb-3" style="background-image: url('<?= base_url('assets/img/psytest4.jpg')?>'); height: 400px;">
-                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="#!">Wartegg Test</a>
+                        <a class="ps-5 h3 fw-bolder text-decoration-none " href="<?= base_url('Auth/register')?>">Wartegg Test</a>
                     </div>
                 </div>
             </div>
             <div class="text-end mb-5 mb-xl-0">
-              <a class=" text text-decoration-none" href="#!">
+              <a class=" text text-decoration-none" href="<?= base_url('Auth/register')?>">
                   More Tests >>
               </a>
             </div>
@@ -46,7 +46,7 @@
     <section class="pt-5 mt-5">
         <div class="container px-5 my-5">
             <h2 class="display-4 fw-bolder mb-4">Let's Heal Your Mental Illness</h2>
-            <a class="btn btn-lg" href="">Contact us</a>
+            <a class="btn btn-lg" href="<?= base_url('Home/contact')?>">Contact us</a>
         </div>
     </section>
   <!-- End PsyTest -->

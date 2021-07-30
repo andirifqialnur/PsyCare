@@ -5,7 +5,7 @@
         <ul class="navbar-nav sidebar bg-gradient-success sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('Dashboard'); ?>">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= base_url('Dashboard/doctordash'); ?>">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-shapes"></i>
                 </div>
@@ -22,25 +22,25 @@
             
             <!-- Nav Item - Schedule Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/schedule');?>">
-                    <i class="fas fa-fw fa-calendar-day"></i>
-                    <span>Schedule</span>
+                <a class="nav-link" href="<?= base_url('Dashboard/doctordash');?>">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Dashboard</span>
                 </a>
             </li>
 
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/articleDoctor');?>">
-                    <i class="fas fa-fw fa-info"></i>
+                <a class="nav-link" href="<?= base_url('Article');?>">
+                    <i class="fas fa-fw fa-newspaper"></i>
                     <span>Add Article</span>
                 </a>
             </li>
             
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/updatedTest');?>">
-                    <i class="fas fa-fw fa-file-alt"></i>
-                    <span>Add Test</span>
+                <a class="nav-link" href="<?= base_url('Article');?>">
+                    <i class="fas fa-fw fa-money-bill-wave"></i>
+                    <span>Balance</span>
                 </a>
             </li>
 
@@ -52,7 +52,7 @@
 
             <!-- Nav Item - Profile -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/profile');?>">
+                <a class="nav-link" href="<?= base_url('Dashboard/profileDoctor');?>">
                     <i class="fas fa-fw fa-user"></i>
                     <span>Edit Profile</span>
                 </a>
@@ -60,7 +60,7 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item pb-3">
-                <a class="nav-link" href="<?= base_url('Home')?>">
+                <a class="nav-link" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-fw fa-sign-out-alt"></i>
                     <span>Log Out</span>
                 </a>

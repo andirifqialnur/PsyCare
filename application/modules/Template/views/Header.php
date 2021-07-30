@@ -47,12 +47,13 @@
             <a class="nav-link" href="<?= base_url('Home/contact')?>">Contact</a>
           </li>
         </ul>
-
-        <ul class="navbar-nav ms-auto me-5">
-          <div class="topbar-divider d-none d-sm-block">
-            <a href="<?=base_url('Auth/register')?>" class="btn me-5 ms-lg-5" role="button" style="color: #ffff">Register</a>
-          </div>
-        </ul>
+          <!-- condition before login -->
+          <ul class="navbar-nav ms-auto me-5">
+            <div class="topbar-divider d-none d-sm-block">
+              <a href="<?=base_url('Auth/register')?>" class="btn me-3" role="button" style="color: #ffff">Sign Up</a>
+              <a href="<?=base_url('Auth')?>" class="btn me-3" role="button" style="color: #ffff">Sign in</a>
+            </div>
+          </ul>
 		  </div>
 		</div>
 	  </nav>
