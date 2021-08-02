@@ -101,7 +101,7 @@ class Article extends MY_Controller {
         }
 
 
-        $this->M_article->addArticle( $data );
+        $this->db->insert( 'article', $data );
         redirect('Article');
     }
 
@@ -127,7 +127,7 @@ class Article extends MY_Controller {
         $dataadmin['admin'] = $this->db->get_where('admin', ['email' => $this->session->userData('email')])->row_array();
         $data['title'] = 'Article Data';
 
-        $data['article'] = $this->M_event->getAllArticle();
+        // $data['article'] = $this->M_event->getAllArticle();
 
         $this->load->view('Template/dash_headerDoctor', $data);
         $this->load->view('Template/dash_barDoctor', $dataadmin);

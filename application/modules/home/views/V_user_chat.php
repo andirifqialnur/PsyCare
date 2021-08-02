@@ -47,35 +47,3 @@
         </div>
     </div>
 </section>
-
-<!-- Modal -->
-<div class="modal fade" id="chatmodal" data-bs-backdrop="static" tabindex="-1"  aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title" id="staticBackdropLabel">Confirm Your Payment</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <div class="form-group text-center">
-                    <p class="fw-bolder display-6">Aoran Galeal</p>
-                    <p>Price : <span style="color: rgb(41, 194, 122);">$40.00</span></p>
-                </div>
-                <div class="form-group pb-4">
-                    <label for="name"> Username </label>
-                    <input type="text" class="mt-3 form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="">
-                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
-                </div>
-                <div class="form-group pb-5">
-                    <label for="email"> Password </label>
-                    <input type="text" class="mt-3 form-control form-control-user" id="name" placeholder="Enter Your Name" name="name" value="">
-                    <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
-                </div>
-            </div>
-        <div class="modal-footer">
-        <button type="button" class="btn">Pay</button>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- End Modal -->

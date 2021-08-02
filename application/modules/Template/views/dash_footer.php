@@ -62,7 +62,7 @@
     </div>
     <!-- End Delete toggle -->
 
-    <!-- Detail toggle -->
+<!-- Detail toggle patient -->
     <div id="detailmodal" class="modal fade" aria-labelledby="exampleModalLabel" style="display: none;" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -93,7 +93,7 @@
                 </div>
             </div>
         </div>
-        <!-- End Detail toggle -->
+<!-- End Detail toggle -->
     
     
 
@@ -112,15 +112,15 @@
         });
     </script>
 
+    <!-- Load data modal detail for admin -->
 
-    <!-- Load data modal detail for admin-->
     <script>
-        $('.bdetail').click(function(){
+        // admin
+        $('.ba_detail').click(function(){
 
-            id = $(this).attr('id');
-                // alert(id);
-
-            $.post("<?= base_url().'Dashboard/adminDataById/' ?>" + id, {}, function(output){
+                id = $(this).attr('id');
+                
+                $.post("<?= base_url().'Dashboard/adminDataById/' ?>" + id, {}, function(output){
                 //output harus json
                 output = JSON.parse(output);
 
@@ -136,10 +136,10 @@
 
     <!-- Load data modal detail for patient-->
     <script>
+        // patient
         $('.bdetail').click(function(){
 
             id = $(this).attr('id');
-                // alert(id);
 
             $.post("<?= base_url().'Dashboard/patientDataById/' ?>" + id, {}, function(output){
                 //output harus json
@@ -157,7 +157,7 @@
 
     <!-- Load data modal detail for doctor -->
     <script>
-        $('.bdetail').click(function(){
+        $('.bd_detail').click(function(){
 
             id = $(this).attr('id');
                 // alert(id);

@@ -20,7 +20,7 @@
     <div class="row">
         <!-- First Column -->
         <div class="col-lg-6">
-        <form action="<?= base_url('Home/editProfile/' . $user['id'])?>" method="post" enctype="multipart/form-data">
+        <?= form_open_multipart('Home/editProfile');?>
             <!-- Custom Text Color Utilities -->
             <div class="card shadow mb-4">
                 <div class="card-header py-3">
@@ -43,7 +43,7 @@
 
                         <hr class="sidebar-divider">
 
-                        <div class="mb-2"><h6>Email Address </h6></div>
+                        <div class="mt-5 mb-2"><h6>Email Address </h6></div>
                         <div class="text-small mb-4 fst-italic text-muted"><?= $user['email']; ?></div>
 
                         <div class="mb-2"><h6>Address </h6></div>
@@ -70,10 +70,18 @@
                         <div class="text-muted pt-3 pb-3 fw-bolder">
                             Data Exist
                         </div>
-                        <div class="mt-4 mb-2"><h6>Name </h6></div>
-                        <div class="text-small mb-4 fst-italic text-muted"><?= $user['name']; ?></div>
-                        <div class="mt-5 mb-2"><h6>Email Address </h6></div>
-                        <div class="text-small mb-4 fst-italic text-muted"><?= $user['email']; ?></div>
+
+                        <div class="form-group mt-4">
+                            <label for="name"><h6>Name</h6></label>
+                            <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Your Name" value="<?= $user['name'];?>">
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
+
+                        <div class="form-group mt-4 mb-5">
+                            <label for="email"><h6>Email Address</h6></label>
+                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Your Email Address" value="<?= $user['email'];?>">
+                            <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
 
                         <hr class="sidebar-divider">
 
@@ -83,22 +91,22 @@
 
                             <div class="form-group mt-4">
                                 <label for="phonenumber"><h6>Phone Number</h6></label>
-                                <input type="text" class="form-control form-control-user" id="phonenumber" name="phonenumber" placeholder="Your Phone Number" >
+                                <input type="text" class="form-control form-control-user" id="phonenumber" name="phonenumber" placeholder="Your Phone Number" value="<?= $user['phonenumber'];?>">
                                 <?= form_error('phonenumber', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="age"><h6>Age</h6></label>
-                                <input type="text" class="form-control form-control-user" id="age" name="age" placeholder="Your Age">
+                                <input type="text" class="form-control form-control-user" id="age" name="age" placeholder="Your Age" value="<?= $user['age'];?>">
                                 <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group mt-4">
                                 <label for="job"><h6>Job</h6></label>
-                                <input type="text" class="form-control form-control-user" id="job" name="job" placeholder="Your Job">
+                                <input type="text" class="form-control form-control-user" id="job" name="job" placeholder="Your Job" value="<?= $user['job'];?>">
                                 <?= form_error('job', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-floating mt-4">
                                 <h6>Address</h6>
-                                <textarea class="form-control" placeholder="Leave a comment here" name="address" id="address" style="height: 100px"></textarea>
+                                <textarea class="form-control" placeholder="Leave a comment here" name="address" id="address" style="height: 100px" value="<?= $user['address'];?>"></textarea>
                                 <?= form_error('address', '<small class="text-danger pl-3">', '</small>');?>    
                             </div>
 

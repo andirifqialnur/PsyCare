@@ -38,9 +38,9 @@
             
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Article');?>">
-                    <i class="fas fa-fw fa-money-bill-wave"></i>
-                    <span>Balance</span>
+                <a class="nav-link" href="<?= base_url('Dashboard/chatted');?>">
+                    <i class="fas fa-fw fa-comments-dollar"></i>
+                    <span>Patient Chatted</span>
                 </a>
             </li>
 
@@ -109,7 +109,7 @@
                             <a class="nav-link dropdown-toggle" href="<?= base_url('Dashboard');?>" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?= $doctor['name'];?></span>
-                                <img class="img-profile rounded-circle" src="<?= base_url('assets/img/lollipop.jpg');?>">
+                                <img class="img-profile rounded-circle" src="<?= base_url('assets/doctor/' . $doctor['image']);?>">
                             </a>
                             <!-- Dropdown - User Information -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"

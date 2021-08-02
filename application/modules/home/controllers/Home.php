@@ -132,11 +132,40 @@ class Home extends MY_Controller {
 		$this->load->view('Template/Footer_user', $data);
 	}
 	public function userchatpayment( $id ){
-		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
-		$this->load->view('Template/Header_user', $data);
 
+		$this->form_validation->set_rules('name', 'name', 'required|trim');
+		$this->form_validation->set_rules('email', 'email', 'required|trim');
+		
+		if ( $this->form_validation->run() == false ) {
+
+			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
+			$data['doctor'] = $this->M_userData->getDoctorById( $id );
+
+			$data['title'] = 'Doctor Chatted';
+
+			$this->load->view('Template/Header_user', $data);
+			$this->load->view('V_user_chat_payment', $data);
+			$this->load->view('Template/Footer_user', $data);
+
+		} else {
+
+			$data = [
+				'name'       => $this->input->post('name', true),
+				'email'      => $this->input->post('email', true),
+				'date_time'  => date('Y-m-d h:m')
+			];
+
+			$this->db->insert('chatted', $data);
+			redirect('Home/userchatted');	
+		}
+	}
+	public function userchatted( $id ){
+		
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+		$this->load->view('Template/Header_user', $data);
+		
 		$data['doctor'] = $this->M_userData->getDoctorById( $id );
-		$this->load->view('V_user_chat_payment', $data);
+		$this->load->view('V_user_chatted', $data);
 		$this->load->view('Template/Footer_user', $data);
 	}
 
@@ -197,8 +226,11 @@ class Home extends MY_Controller {
 	}
 // end content
 	
-	// profile
-	public function editProfile( $id ){
+// edit profile
+	public function editProfile(){
+
+		$data['title']= 'Edit Profile';
+		$data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
 		$this->form_validation->set_rules('age', 'Age', 'required|trim');
 		$this->form_validation->set_rules('phonenumber', 'phonenumber', 'required|trim');
@@ -207,54 +239,65 @@ class Home extends MY_Controller {
 
 		if ( $this->form_validation->run() == false ) {
 
-			$data['title']= 'Edit Event';
-			$data['user'] = $this->db->get_where('user', ['email' => $this->session->userData('email')])->row_array();
 			$this->load->view('Template/Header_user', $data);
-	
-			$data['user'] = $this->M_home->getUserById( $id );
 			$this->load->view('V_user_editProfile', $data);
 			$this->load->view('Template/Footer_user', $data);
 
 		} else {
 
-			$config['upload_path']		= './assets/photo/';
-			$config['allowed_types']	= 'gif|jpg|png|jpeg';
-			$config['max_size']         = 100000000;
-			$config['max_width']        = 100000000;
-			$config['max_height']       = 100000000;	
+			$name = $this->input->post('name');
+			$email = $this->input->post('email');
+			$age = $this->input->post('age');
+			$phonenumber = $this->input->post('phonenumber');
+			$address = $this->input->post('address');
+			$job = $this->input->post('job');
 
-			$this->load->library('upload', $config);
 
-			if ( !$this->upload->do_upload('photo') ) {
+			$upload_image = $_FILES ['photo'] ['name'];
 
-				$error = array('error' => $this->upload->display_errors());
-				echo "Wroonggg Come On Man I'm Tiredd";
-				$this->load->view('Auth/register', $error);
+			if ($upload_image) {
 
-			} else {
+				$config['upload_path']		= './assets/photo/';
+				$config['allowed_types']	= 'gif|jpg|png|jpeg';
+				$config['max_size']         = 100000000;
+				$config['max_width']        = 100000000;
+				$config['max_height']       = 100000000;
 
-				$foto = $this->upload->data();
-				$foto = $foto['file_name'];
+				$this->load->library('upload', $config);
 
-				$data = array(
+				if ( $this->upload->do_upload('photo') ) { 
 
-					'job' => $this->input->post('job', true),
-					'age' => $this->input->post('age', true),
-					'phonenumber' => $this->input->post('phonenumber', true),
-					'address' => $this->input->post('address', true),
-					'image' => $foto,
-				);
+					$new_image = $this->upload->data('file_name');
+					$this->db->set('image', $new_image);
 
-				$where = array('id' => $id);
+				} else {
+
+					$error = array('error' => $this->upload->display_errors());
+					echo "Wroonggg Come On Man I'm Tiredd";
+					$this->load->view('Auth/register', $error);
+
+				}
 			}
-			
-			$this->db->where($where);
-        	$this->db->update($data, 'user');
-			redirect('Home/userhome');
+
+			$this->db->set('name', $name);
+			$this->db->set('age', $age);
+			$this->db->set('phonenumber', $phonenumber);
+			$this->db->set('address', $address);
+			$this->db->set('job', $job);
+			$this->db->where('email', $email);
+			$this->db->update('user');
+
+			$this->session->set_flashdata('message', 
+                    '<div class="alert alert-success alert-dismissible fade show" role="alert"> 
+                        <strong>Success!</strong> Your Account has been created
+                    </div>');
+            redirect('Home/editProfile');
 		}
 	}
+// end
+
 	
-	// User Edit Data
+// User Edit Data
 	public function updateUserData() {	
 
         $this->form_validation->set_rules('name', 'Name', 'required|trim');

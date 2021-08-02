@@ -38,12 +38,6 @@
                                             <input type="password" class="form-control form-control-user" id="password2" placeholder="Repeat Password" name="password2">
                                         </div>  
                                     </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="age"> Age </label>
-                                        <input type="text" class="form-control form-control-user" id="age" placeholder="Enter Your Age" name="age" value="">
-                                        <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
 
                                     <div class="form-group">
                                         <label for="phonenumber"> Phone Number </label>
@@ -56,25 +50,11 @@
                                         <input type="text" class="form-control form-control-user" id="experience" placeholder="Enter Your Experience" name="experience" value="">
                                         <?= form_error('experience', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
- 
-                                    <div class="form-group">
-                                        <label for="gender"> Gender </label>
-                                        <select name="gender" id="gender" class="form-control">
-                                            <option value="1">Male</option>
-                                            <option value="0">Female</option>
-                                        </select>
-                                    </div>
                                     
                                     <div class="form-group">
                                         <label for="photo"> Input Image Profile </label>
                                         <input type="file" class="form-control form-control-user pb-5" id="photo" placeholder="Insert Your Image Profile" name="photo">
                                         <?= form_error('photo', '<small class="text-danger pl-3">', '</small>');?>
-                                    </div>
-                                    
-                                    <div class="form-group">
-                                        <label for="quotes"> Quotes </label>
-                                        <textarea class="form-control" name="quotes" id="quotes" style="height: 200px"></textarea>
-                                        <?= form_error('quotes', '<small class="text-danger pl-3">', '</small>');?>
                                     </div>
 
                                     <button type="submit" class="btn btn-success btn-user btn-block">

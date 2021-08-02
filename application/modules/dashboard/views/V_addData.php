@@ -86,11 +86,6 @@
                                 <?= form_error('password2', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group pb-4">
-                                <label for="age" class="text-dark">Age</label>
-                                <input type="text" class="mt-2 form-control form-control-user fst-italic" id="age" name="age" placeholder="Your Age...">
-                                <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
-                            </div>
-                            <div class="form-group pb-4">
                                 <label for="keyy" class="text-dark">Key</label>
                                 <input type="text" class="mt-2 form-control form-control-user fst-italic" id="keyy" name="keyy" placeholder="Key permission">
                                 <?= form_error('keyy', '<small class="text-danger pl-3">', '</small>');?>

@@ -63,14 +63,6 @@
             
             <!-- Nav Item - Update Info -->
             <li class="nav-item">
-                <a class="nav-link" href="<?= base_url('Dashboard/updatedInfo');?>">
-                    <i class="fas fa-fw fa-info"></i>
-                    <span>Info</span>
-                </a>
-            </li>
-            
-            <!-- Nav Item - Update Info -->
-            <li class="nav-item">
                 <a class="nav-link" href="<?= base_url('Test');?>">
                     <i class="fas fa-fw fa-file-alt"></i>
                     <span>Test</span>

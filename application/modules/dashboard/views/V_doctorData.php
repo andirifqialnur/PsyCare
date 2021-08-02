@@ -49,7 +49,7 @@
                                                 <td><?= $doctors['is_active'] ?></td>
 
                                                 <td>
-                                                    <a href="" class="btn btn-info" data-toggle="modal" data-target="#detailmodal">Detail</a>
+                                                    <a href="" id="<?= $doctors['id'] ?>" class="btn btn-info bd_detail" >Detail</a>
                                                     <a href="<?= base_url()?>Dashboard/formEdit/<?= $doctors['id'] ?>" class="btn btn-primary">Edit</a>
                                                     <a href="" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">Delete</a>
                                                 </td>

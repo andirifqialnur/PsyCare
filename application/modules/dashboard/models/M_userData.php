@@ -96,6 +96,17 @@ class M_userData extends CI_Model {
 
     }
 
+// Chatted
+
+    public function getAllChatted() {
+
+        return $this->db->get('chatted')->result_array();
+    }
+    public function getChattedById( $id ) {
+
+        return $this->db->get_where('chatted', ['id' => $id])->row_array();
+    }
+
 // Admin session delete
     //delete user
     public function deleteUser($id) {
@@ -186,6 +197,20 @@ class M_userData extends CI_Model {
     public function calculateArticles() {
 
         $query = $this->db->get('article');
+
+        if ( $query->num_rows() > 0 ) {
+
+            return $query->num_rows();
+
+        } else {    
+
+            return 0;
+        }
+    }
+    // chatted
+    public function calculateChatted() {
+
+        $query = $this->db->get('chatted');
 
         if ( $query->num_rows() > 0 ) {
 

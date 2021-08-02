@@ -77,7 +77,7 @@ class Dashboard extends MY_Controller {
         $this->load->view('Template/dash_header', $data);
         $this->load->view('Template/dash_bar', $dataadmin);
         $this->load->view('V_doctorData', $data);
-        $this->load->view('Template/dash_footerDoctor');
+        $this->load->view('Template/dash_footer');
     }
     // doctorDataById
     public function doctorDataById( $id ){
@@ -87,17 +87,7 @@ class Dashboard extends MY_Controller {
 
         echo $json;
     }
-
-    // article
-    public function addArticle(){
-        $dataadmin['admin'] = $this->db->get_where('admin', ['email' => $this->session->userData('email')])->row_array();
-        $data['title'] = 'Add Article';
-
-        $this->load->view('Template/dash_header', $data);
-        $this->load->view('Template/dash_bar', $dataadmin);
-        $this->load->view('V_updatedInfo');
-        $this->load->view('Template/dash_footer');
-    }
+    
     // updateTest
     public function updatedTest(){
         $dataadmin['admin'] = $this->db->get_where('admin', ['email' => $this->session->userData('email')])->row_array();
@@ -130,12 +120,12 @@ class Dashboard extends MY_Controller {
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]|matches[password2]', 
                                             ['matches' => 'Password not match!', 'min_length' => 'Password is short']);
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password]');
-        $this->form_validation->set_rules('age', 'Age', 'required|trim');
         $this->form_validation->set_rules('address', 'Address', 'required|trim');
         $this->form_validation->set_rules('keyy', 'Key', 'required|trim');
                                          
         if ( $this->form_validation->run() == false ) {
 
+            $data['admin'] = $this->db->get_where('admin', ['email' => $this->session->userData('email')])->row_array();
             $data['title'] = 'Adding Data';
 
             $this->load->view('Template/dash_header', $data);
@@ -151,10 +141,9 @@ class Dashboard extends MY_Controller {
                 'email' =>  htmlspecialchars($this->input->post('email', true)),
                 'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
                 'job' =>  htmlspecialchars($this->input->post('job', true)),
-                'age' => $this->input->post('age', true),
                 'address' =>  htmlspecialchars($this->input->post('address', true)),
                 'keyy' =>  htmlspecialchars($this->input->post('keyy', true)),
-                'date_time' => time(),
+                'date_time' => date('Y-m-d h:m:s'),
                 'is_active' => 1
             ];
                 
@@ -222,46 +211,113 @@ class Dashboard extends MY_Controller {
         $data['event_total'] = $this->M_userData->calculateEvents();
         $data['test_total'] = $this->M_userData->calculateTests();
         $data['article_total'] = $this->M_userData->calculateArticles();
+        $data['chat_total'] = $this->M_userData->calculateChatted();
 
         $this->load->view('Template/dash_header', $data);
         $this->load->view('Template/dash_barDoctor', $datadoctor);
         $this->load->view('V_dashDoctor', $data);
         $this->load->view('Template/dash_footer');
     }
-
-    // schedule
-    public function schedule() {
+    // chatted
+    public function chatted() {
         
         $datadoctor['doctor'] = $this->db->get_where('doctor', ['email' => $this->session->userData('email')])->row_array();
-        $data['title'] = 'Set Schedule';
+        $data['chatted'] = $this->M_userData->getAllChatted();
+        $data['title'] = 'Patient Chatted';
 
         $this->load->view('Template/dash_header', $data);
         $this->load->view('Template/dash_barDoctor', $datadoctor);
-        $this->load->view('V_schedule', $datadoctor);
+        $this->load->view('V_chatted', $datadoctor);
         $this->load->view('Template/dash_footer');
     }
 
-    // profileDoctor
+    // profile Doctor
     public function profileDoctor(){
-        
-        $datadoctor['doctor'] = $this->db->get_where('doctor', ['email' => $this->session->userData('email')])->row_array();
-        $data['title'] = 'Edit Profile';
 
-        $this->load->view('Template/dash_header', $data);
-        $this->load->view('Template/dash_barDoctor', $datadoctor);
-        $this->load->view('V_profileDoctor', $datadoctor);
-        $this->load->view('Template/dash_footer');
-    }
-    
-    // articleDoctor
-    public function articleDoctor(){
-        
-        $datadoctor['doctor'] = $this->db->get_where('doctor', ['email' => $this->session->userData('email')])->row_array();
-        $data['title'] = 'Add Article';
-        
-        $this->load->view('Template/dash_header', $data);
-        $this->load->view('Template/dash_barDoctor', $datadoctor);
-        $this->load->view('V_article', $datadoctor);
-        $this->load->view('Template/dash_footer');
-    }
+		$data['title']= 'Edit Profile Doctor';
+		$data['doctor'] = $this->db->get_where('doctor', ['email' => $this->session->userdata('email')])->row_array();
+
+        // exist data
+		$this->form_validation->set_rules('name', 'name', 'required|trim');
+		$this->form_validation->set_rules('email', 'email', 'required|trim');
+		$this->form_validation->set_rules('phonenumber', 'phonenumber', 'required|trim');
+		$this->form_validation->set_rules('experience', 'experience', 'required|trim'); 
+
+        // additional data
+		$this->form_validation->set_rules('age', 'Age', 'required|trim');
+		$this->form_validation->set_rules('address', 'Address', 'required|trim');
+		$this->form_validation->set_rules('quotes', 'Quotes', 'required|trim');
+		$this->form_validation->set_rules('dayset', 'Dayset', 'required|trim');
+		$this->form_validation->set_rules('timeset', 'Timeset', 'required|trim');
+		$this->form_validation->set_rules('price', 'Price', 'required|trim');
+
+		if ( $this->form_validation->run() == false ) {
+
+			$this->load->view('Template/dash_header', $data);
+            $this->load->view('Template/dash_barDoctor', $data);
+            $this->load->view('V_profileDoctor', $data);
+            $this->load->view('Template/dash_footer');  
+
+		} else {
+
+			$name = $this->input->post('name');
+			$email = $this->input->post('email');
+			$phonenumber = $this->input->post('phonenumber');
+			$experience = $this->input->post('experience');
+
+			$age = $this->input->post('age');
+			$address = $this->input->post('address');
+			$quotes = $this->input->post('quotes');
+			$dayset = $this->input->post('dayset');
+			$timeset = $this->input->post('timeset');
+			$price = $this->input->post('price');
+
+
+			$upload_image = $_FILES ['photo'] ['name'];
+
+			if ($upload_image) {
+
+				$config['upload_path']		= './assets/doctor/';
+				$config['allowed_types']	= 'gif|jpg|png|jpeg';
+				$config['max_size']         = 100000000;
+				$config['max_width']        = 100000000;
+				$config['max_height']       = 100000000;
+
+				$this->load->library('upload', $config);
+
+				if ( $this->upload->do_upload('photo') ) { 
+
+					$new_image = $this->upload->data('file_name');
+					$this->db->set('image', $new_image);
+
+				} else {
+
+					$error = array('error' => $this->upload->display_errors());
+					echo "Wroonggg Come On Man I'm Tiredd";
+					$this->load->view('Auth/regisDoctor', $error);
+
+				}
+			}
+
+			$this->db->set('name', $name);
+			$this->db->set('age', $age);
+			$this->db->set('phonenumber', $phonenumber);
+			$this->db->set('experience', $experience);
+
+			$this->db->set('dayset', $dayset);
+			$this->db->set('timeset', $timeset);
+			$this->db->set('price', $price);
+			$this->db->set('quotes', $quotes);
+			$this->db->set('address', $address);
+
+			$this->db->where('email', $email);
+			$this->db->update('doctor');
+
+			$this->session->set_flashdata('message', 
+                    '<div class="alert alert-success alert-dismissible fade show" role="alert"> 
+                        <strong>Success!</strong> Your Account has been created
+                    </div>');
+            redirect('Dashboard/profileDoctor');
+		}
+	}
 }

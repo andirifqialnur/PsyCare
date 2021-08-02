@@ -1,7 +1,7 @@
 
 <div class="container-fluid pt-5 px-4 px-lg-5 my-5">
     <!-- Content Row -->
-    <form action="<?= base_url();?>Article/addArticle" method="post">
+    <form action="<?= base_url('Article/addArticle');?>" method="post">
         <div class="row">
             <!-- First Column -->
             <div class="col-lg-4">

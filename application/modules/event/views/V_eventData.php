@@ -109,19 +109,21 @@
             </select>
         </div>
 
-        <div class="form-group">
+        <div class="form-group mb-3">
             <label for="price">Price</label>
             <input type="text" name="price" class="form-control">
         </div>
 
-        <div class="form-group">
-            <label for="speakpro">Speaker Profile</label>
-            <input type="file" name="speakpro" class="form-control">
+        <label for="speakpro">Speaker Profile</label>
+        <div class="custom-file mb-3">
+            <input type="file" class="custom-file-input" id="speakpro" name="speakpro">
+            <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
 
-        <div class="form-group">
-            <label for="thumb">Thumbnail</label>
-            <input type="file" name="thumb" class="form-control">
+        <label for="thumb">Thumbnail</label>
+        <div class="custom-file mb-4">
+            <input type="file" class="custom-file-input" id="thumb" name="thumb">
+            <label class="custom-file-label" for="customFile">Choose file</label>
         </div>
 
         <div class="form-group">

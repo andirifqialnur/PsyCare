@@ -64,7 +64,7 @@
                     </div>
 
                     <div class="card-body pt-3">
-                        <form action="<?= base_url('Home/userchatpayment/')?>" method="post">
+                        <form action="<?= base_url('Home/userchatpayment/' . $doctor['id'])?>" method="post">
                             <input type="hidden" name="id">
                             <div class="form-group pb-4">
                                 <label for="name"> Name </label>
@@ -77,7 +77,7 @@
                                 <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
                             <div class="form-group pb-4">
-                                <label for="email"> Price </label>
+                                <label for="price"> Price </label>
                                 <div class="color-b pt-3"><h5>Rp.<?= number_format($doctor['price'])?></h5></div>
                             </div>
                             <button type="submit" class="mt-3 rounded-3 btn mb-3">Pay</button>

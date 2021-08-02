@@ -283,42 +283,6 @@ class Auth extends MY_Controller {
                 redirect('Auth');
             }
         }
-// -------------
-
-        // $name        = $this->input->post('name', true);
-        // $email       = $this->input->post('email', true);
-        // $password    = md5($this->input->post('password', true));
-        // $foto        = $_FILES['photo'];
-
-        // if ( $foto = '' ) { } else {
-
-        //     $config ['upload_path'] = './assets/photo';
-        //     $config ['allowed_types'] = 'jpg|jpeg|png|gif';
-
-        //     $this->load->library('upload', $config);
-
-        //     if ( !$this->upload->do_upload('photo')){
-
-        //         echo "Gagal upload profile";
-
-        //     } else {
-
-        //         $foto = $this->upload->data('file_name');
-        //         $data = array(
-        
-        //             'name'         => $name,
-        //             'email'        => $email,
-        //             'password'     => $password,
-        //             'image'        => $foto,
-        //             'is_active'    => 1,
-        //             'date_time'    => date('Y-m-d h:m:s')
-        //         );
-        
-        //         $this->M_register->input($data, 'user');
-        //         redirect('Auth');
-        //     }
-        // }
-// --------------------
 	}
 
 // ----------------------------------------------------------------------------------------------------------------------------------
@@ -329,14 +293,12 @@ class Auth extends MY_Controller {
         $this->form_validation->set_rules('name', 'Name', 'required|trim');
         $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[user.email]',
             ['is_unique' => 'This Email Already Registered!']);
-        $this->form_validation->set_rules('age', 'Age', 'required|trim');
-        $this->form_validation->set_rules('phonenumber', 'Phone Number', 'required|trim');
         $this->form_validation->set_rules('experience', 'Experience', 'required|trim');
+        $this->form_validation->set_rules('phonenumber', 'Phone Number', 'required|trim');
         $this->form_validation->set_rules('password', 'Password', 'required|trim|min_length[8]|matches[password2]',
             ['matches' => 'Password not Match!',
             'min_length' => 'Password is Short']);
         $this->form_validation->set_rules('password2', 'Password', 'required|trim|matches[password]');
-        $this->form_validation->set_rules('quotes', 'Quotes', 'required|trim');
 
         if ( $this->form_validation->run() == false ) {
 
@@ -370,11 +332,8 @@ class Auth extends MY_Controller {
                 $data = [
                     'name'         => htmlspecialchars($this->input->post('name', true)),
                     'email'        => htmlspecialchars($this->input->post('email', true)),
-                    'age'          => $this->input->post('age', true),
-                    'gender'       => $this->input->post('gender', true),
                     'phonenumber'  => $this->input->post('phonenumber', true),
                     'experience'   => $this->input->post('experience', true),
-                    'quotes'       => htmlspecialchars($this->input->post('quotes', true)),
                     'image'        => $gambar,
                     'password'     => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
                     'is_active'    => 1,

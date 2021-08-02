@@ -17,25 +17,25 @@ class M_home extends CI_Model {
     //     return $this->db->get('event');
     // }
 
-    public function getAllRegisteredData() {
-        $this->db->select('*');
-        $this->db->from('event');
-        $this->db->join('user', 'user.id = event.id_user', 'left');
-        $query = $this->db->get();
-        return $query->result();
-    }
-    public function getRegisteredData( $id ) {
-        $this->db->select('*');
-        $this->db->from('event');
-        $this->db->join('user', 'user.id = event.id_user', 'left');
-        $this->db->where('id', $id);
-        $query = $this->db->get();
-        return $query->result();
-    }
+    // public function getAllRegisteredData() {
+    //     $this->db->select('*');
+    //     $this->db->from('event');
+    //     $this->db->join('user', 'user.id = event.id_user', 'left');
+    //     $query = $this->db->get();
+    //     return $query->result();
+    // }
+    // public function getRegisteredData( $id ) {
+    //     $this->db->select('*');
+    //     $this->db->from('event');
+    //     $this->db->join('user', 'user.id = event.id_user', 'left');
+    //     $this->db->where('id', $id);
+    //     $query = $this->db->get();
+    //     return $query->result();
+    // }
 
-    public function countPrice( $id ) {
-        $sql = "select count(id_) as summary from review where id_product= $id ";
-    }
+    // public function countPrice( $id ) {
+    //     $sql = "select count(id_) as summary from review where id_product= $id ";
+    // }
 
 // User session edit profile data
     // User Edit Data

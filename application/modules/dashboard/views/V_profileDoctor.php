@@ -1,115 +1,131 @@
-                <!-- Begin Page Content -->
-                <div class="container-fluid">
+<div class="container-fluid pt-5 px-4 px-lg-5 my-5">
+    <!-- Content Row -->
+    <div class="row">
+        <!-- First Column -->
+        <div class="col-lg-4">
+        <?= form_open_multipart('Dashboard/profileDoctor');?>
+            <!-- Custom Text Color Utilities -->
+            <div class="card shadow mb-4">
+                <div class="card-header py-3">
+                    <h6 class="m-0 font-weight-bold">Form Profile</h6>
+                </div>
+                <!-- <?= $this->session->flashdata('message');?> -->
+                <div class="card-body">
+                    <div class="pt-5 pb-5 col mb-5 mb-5 mb-xl-0">
+                            <div class="text-center pb-5">
+                                
+                                <img class="img-fluid rounded-circle mb-4 px-4" src="<?= base_url('assets/doctor/' . $doctor['image']) ?>" style="width:256px; height:200px;">
 
-                    <!-- Page Heading -->
-                    <div class="card shadow mb-4">
-                        <div class="card-body">
-                            <h1 class="h3 mb-2 text-gray-800">Profile</h1>
-                            <p class="mb-4">Bootstrap's default utility classes can be found on the official <a target="_blank"
-                                href="https://getbootstrap.com/docs">page. The custom utilities
-                                below were created to extend this theme past the default utility classes built into Bootstrap's
-                                framework</a>.</p>
-                            <nav aria-label="breadcrumb" role="navigation">
-                                <ol class="breadcrumb">
-                                    <li class="breadcrumb-item active" aria-current="page">Profile</li>
-                                </ol>
-                            </nav>
-                        </div>
+                                <h5 class="fw-bolder"><?= $doctor['name'] ?></h5>
+                            </div>
+
+                            <label for="photo">Edit Profile Photo</label>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="photo" name="photo">
+                                <label class="custom-file-label" for="customFile">Choose file</label>
+                            </div>
+
+                        <hr class="sidebar-divider">
+
+                        <div class="mt-5 mb-2"><h6 class="text-success">Email Address </h6></div>
+                        <div class="text-small mb-4 fst-italic text-muted"><?= $doctor['email']; ?></div>
+                        
+                        <div class="mb-2"><h6 class="text-success">Quotes </h6></div>
+                        <div class="text-small mb-4 fst-italic text-muted"><?= $doctor['quotes']; ?></div>
+
+                        <div class="mb-2"><h6 class="text-success">Address </h6></div>
+                        <div class="text-small fst-italic text-muted"><?= $doctor['address']; ?></div>
                     </div>
+                </div>
+            </div>
 
-                    <!-- Content Row -->
-                    <div class="row">
+            <!-- Custom Font Size Utilities -->
+            
+        </div>
 
-                        <!-- First Column -->
-                        <div class="col-lg-4">
+            <!-- Second Column -->
+            <div class="col-lg-8">
 
-                            <!-- Custom Text Color Utilities -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Custom Text Color Utilities</h6>
-                                </div>
-                                <div class="card-body">
-                                <div class="pt-5 pb-5 col mb-5 mb-5 mb-xl-0">
-                                    <div class="text-center">
-                                        <img class="img-fluid rounded-circle mb-4 px-4" src="https://dummyimage.com/200x200/ced4da/6c757d"/>
-                                        <h5 class="fw-bolder">Andi Rifqial Nur</h5>
-                                        <div class="fst-italic text-muted pb-3">Founder &amp; CEO</div>
-                                        <div class="fw-bolder text-muted pb-4">------------------------------------------------------------</div>
-                                    </div>
-                                    <div class="mb-2 text-success"><h6>Email Address :</h6></div>
-                                    <div class="text-small mb-4">andirifqialnur276@gmail.com</div>
+                <!-- Background Gradient Utilities -->
+                <div class="card shadow mb-4">
+                    <div class="card-header py-3">
+                        <h6 class="m-0 font-weight-bold ">Form Data
+                        </h6>
+                    </div>
+                    <div class="card-body pt-3">
 
-                                    <div class="mb-2 text-success"><h6>Phone Number :</h6></div>
-                                    <div class="text-small mb-4">085263563381</div>
-
-                                    <div class="mb-2 text-success"><h6>Address :</h6></div>
-                                    <div class="text-small">Sinjai</div>
-                                </div>
-                                </div>
-                            </div>
-
-                            <!-- Custom Font Size Utilities -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Custom Font Size Utilities</h6>
-                                </div>
-                                <div class="card-body">
-                                    <p class="text-xs">.text-xs</p>
-                                    <p class="text-lg mb-0">.text-lg</p>
-                                </div>
-                            </div>
-
+                        <div class="text-muted pt-3 pb-3">
+                            Data Exist
                         </div>
 
-                        <!-- Second Column -->
-                        <div class="col-lg-8">
+                        <div class="form-group mt-4">
+                            <label for="name"><h6 class="text-success">Name</h6></label>
+                            <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Your Name" value="<?= $doctor['name'];?>">
+                            <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
 
-                            <!-- Background Gradient Utilities -->
-                            <div class="card shadow mb-4">
-                                <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-success">Form Profile
-                                    </h6>
-                                </div>
-                                <div class="card-body">
-                                <form action="<?= base_url('Dashboard/formEdit/')?><?= $doctor['id'] ?>" method="post">
-                                    <input type="hidden" name="id" value="<?= $doctor['id']; ?>">
-                                        <div class="form-group">
-                                            <label for="name">Nama</label>
-                                            <input type="text" class="form-control form-control-user" id="name" name="name" placeholder="Your Nama..."  value="<?= $doctor['name'] ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="email">Email</label>
-                                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Your Email..." value="<?= $doctor['email'] ?>">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="phone">Phone Number</label>
-                                            <input type="text" class="form-control form-control-user" id="phone" name="phone" placeholder="Your Phone Number..." >
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password">Password</label>
-                                            <input type="text" class="form-control form-control-user" id="password" name="password" placeholder="Your Password..." >
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="password2">New Password</label>
-                                            <input type="text" class="form-control form-control-user" id="password2" name="password2" placeholder="Repeat Your Password...">
-                                        </div>
+                        <div class="form-group mt-4">
+                            <label for="email"><h6 class="text-success">Email Address</h6></label>
+                            <input type="text" class="form-control form-control-user" id="email" name="email" placeholder="Your Email Address" value="<?= $doctor['email'];?>">
+                            <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
 
-                                        <div class="form-group">
-                                            <label for="age">Age</label>
-                                            <input type="text" class="form-control form-control-user" id="age" name="age" placeholder="Your Age...">
-                                        </div>
-                                        
-                                        <div class="form-floating">
-                                            <textarea class="form-control" placeholder="Leave a comment here" name="address" id="address" style="height: 100px"></textarea>
-                                            <label for="address">Address</label>
-                                        </div>
-                                    <button type="submit" class="btn btn-success">Submit</button>
-                                </form>
-                                </div>
+                        <div class="form-group mt-4">
+                            <label for="phonenumber"><h6 class="text-success">Phone Number</h6></label>
+                            <input type="text" class="form-control form-control-user" id="phonenumber" name="phonenumber" placeholder="Your Phone Number" value="<?= $doctor['phonenumber'];?>">
+                            <?= form_error('phonenumber', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
+
+                        <div class="form-group mt-4 mb-5">
+                            <label for="experience"><h6 class="text-success">Experience</h6></label>
+                            <input type="text" class="form-control form-control-user" id="experience" name="experience" placeholder="Your Phone Number" value="<?= $doctor['experience'];?>">
+                            <?= form_error('experience', '<small class="text-danger pl-3">', '</small>');?>
+                        </div>
+
+                        <hr class="sidebar-divider">
+
+                        <div class="text-muted pt-3 pb-3 fw-bolder">
+                            Additional Data 
+                        </div>
+
+                            <div class="form-group mt-4">
+                                <label for="age"><h6 class="text-success">Age</h6></label>
+                                <input type="text" class="form-control form-control-user" id="age" name="age" placeholder="Your Age" value="<?= $doctor['age'];?>">
+                                <?= form_error('age', '<small class="text-danger pl-3">', '</small>');?>
                             </div>
+                            <div class="form-group mt-4">
+                                <label for="price"><h6 class="text-success">Price set</h6></label>
+                                <input type="text" class="form-control form-control-user" id="price" name="price" placeholder="Your price" value="<?= $doctor['price'];?>">
+                                <?= form_error('price', '<small class="text-danger pl-3">', '</small>');?>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label for="dayset"><h6 class="text-success">Day Work</h6></label>
+                                <input type="text" class="form-control form-control-user" id="dayset" name="dayset" placeholder="Your dayset for work" value="<?= $doctor['dayset'];?>">
+                                <?= form_error('dayset', '<small class="text-danger pl-3">', '</small>');?>
+                            </div>
+                            <div class="form-group mt-4">
+                                <label for="timeset"><h6 class="text-success">Time Work</h6></label>
+                                <input type="text" class="form-control form-control-user" id="timeset" name="timeset" placeholder="Your timeset for work" value="<?= $doctor['timeset'];?>">
+                                <?= form_error('timeset', '<small class="text-danger pl-3">', '</small>');?>
+                            </div>
+                            <div class="form-floating mt-4">
+                                <h6 class="text-success">Address</h6>
+                                <textarea class="form-control" placeholder="Leave a comment here" name="address" id="address" style="height: 100px" value="<?= $doctor['address'];?>"></textarea>
+                                <?= form_error('address', '<small class="text-danger pl-3">', '</small>');?>    
+                            </div>
+                            <div class="form-floating mt-4">
+                                <h6 class="text-success">Quotes</h6>
+                                <textarea class="form-control" placeholder="Leave a comment here" name="quotes" id="quotes" style="height: 100px" value="<?= $doctor['quotes'];?>"></textarea>
+                                <?= form_error('quotes', '<small class="text-danger pl-3">', '</small>');?>    
+                            </div>
+
+                            <button type="submit" class=" rouded-circle btn btn-success mt-5"><i class="fas fa-edit pe-2"></i>Edit</button>
                         </div>
                     </div>
                 </div>
-                <!-- /.container-fluid -->
             </div>
-            <!-- End of Main Content -->
+        </form>
+    </div>
+</div>
+
+

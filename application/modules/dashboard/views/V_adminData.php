@@ -51,7 +51,7 @@
                                                 <td><?= $admins['is_active'] ?></td>
 
                                                 <td>
-                                                    <a href="" class="btn btn-info" data-toggle="modal" data-target="#detailmodal">Detail</a>
+                                                    <a href="" id="<?= $admins['id'] ?>" class="btn btn-info ba_detail">Detail</a>
                                                     <a href="" class="btn btn-danger" data-toggle="modal" data-target="#deletemodal">Delete</a>
                                                 </td>
                                             </tr>
@@ -62,3 +62,72 @@
                             </div>
                         </div>
                     </div>
+
+
+<!-- Modal add event -->
+
+<div class="modal fade" id="addAdmin" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Form Add Event</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="<?= base_url('Event/addEvent')?>" method="post" enctype="multipart/form-data">
+
+                    <div class="form-group pb-4">
+                        <label for="name" class="text-dark">Nama</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="name" name="name" placeholder="Your Name...">
+                        <?= form_error('name', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="email" class="text-dark">Email</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="email" name="email" placeholder="Your Email..." >
+                        <?= form_error('email', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="phonenumber" class="text-dark">Phone Number</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="phonenumber" name="phonenumber" placeholder="Your Phone Number..." >
+                        <?= form_error('phonenumber', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="job" class="text-dark">Job</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="job" name="job" placeholder="Your Job...">
+                        <?= form_error('job', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="password" class="text-dark">Password</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="password" name="password" placeholder="Your Password...">
+                        <?= form_error('password', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="password2" class="text-dark">Re-type Password</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="password2" name="password2" placeholder="Repeat Your Password...">
+                        <?= form_error('password2', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="keyy" class="text-dark">Key</label>
+                        <input type="text" class="mt-2 form-control form-control-user fst-italic" id="keyy" name="keyy" placeholder="Key permission">
+                        <?= form_error('keyy', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                    <div class="form-group pb-4">
+                        <label for="address" class="text-dark">Address</label>
+                        <div class="mt-2 form-floating pb-4" >
+                            <textarea class="form-control fst-italic" name="address" id="address" style="height: 200px" ></textarea>
+                        </div>
+                        <?= form_error('address', '<small class="text-danger pl-3">', '</small>');?>
+                    </div>
+                </div>
+
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-success">Save</button>
+                </div>
+                </form>
+        </div>
+    </div>
+</div>
+<!-- end Modal -->
