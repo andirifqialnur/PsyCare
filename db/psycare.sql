@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 25, 2021 at 01:48 PM
+-- Generation Time: Aug 03, 2021 at 08:46 AM
 -- Server version: 10.4.18-MariaDB
 -- PHP Version: 8.0.3
 
@@ -48,7 +48,8 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`id`, `name`, `phonenumber`, `email`, `job`, `age`, `address`, `password`, `image`, `date_time`, `is_active`, `keyy`) VALUES
 (1, 'Chronicles', 1234567890, 'chro@gmail.com', 'sembarang', 20, 'jalanin aja dlu', '$2y$10$Cie5l5wuzMPZkHdxB2Pu5.iPgTWvXq4NwQ0AB4asgXR9cfSBg3fze', '', '0000-00-00 00:00:00', 1, 'siapa?'),
-(2, 'araaaaaaaaaaaaaaaaaaaaaaan', 1234567890, 'arana@gmail.com', 'gak ada', 20, 'jalan ninjaku', '$2y$10$eY75fCl5JtU3VodyF0l6feppfzw2Ye/e0HPrC.mCtxAto8z1KvI.m', '', '0000-00-00 00:00:00', 1, 'apa?');
+(2, 'araaaaaaaaaaaaaaaaaaaaaaan', 1234567890, 'arana@gmail.com', 'gak ada', 20, 'jalan ninjaku', '$2y$10$eY75fCl5JtU3VodyF0l6feppfzw2Ye/e0HPrC.mCtxAto8z1KvI.m', '', '0000-00-00 00:00:00', 1, 'apa?'),
+(3, 'afavvs', 121432345, 'adas@gmail.com', '1fsdj aksvsc', NULL, 'acacdcsvsc', '$2y$10$GNGrSOeVvJX72JKNWEYKTu/rAxgkF881kiArxX/6fFHVb3Vm148SK', '', '0000-00-00 00:00:00', 1, 'apa');
 
 -- --------------------------------------------------------
 
@@ -71,6 +72,30 @@ CREATE TABLE `article` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `chatted`
+--
+
+CREATE TABLE `chatted` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `date_time` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `chatted`
+--
+
+INSERT INTO `chatted` (`id`, `name`, `email`, `date_time`) VALUES
+(1, 'Andi Rifqial Nur', 'andirifqialnur276@gmail.com', '2021-07-31 05:07:00'),
+(2, 'sembarang', 'sembarang@gmail.com', '2021-08-02 12:08:00'),
+(3, 'afdfvvvvvvvvd', 'asu@gmail.com', '2021-08-02 12:08:00'),
+(4, 'csafavd  rfs fwegf', 'danm@gmail.com', '2021-08-02 12:08:00'),
+(5, 'dfsrvdfv', 'as@gmail.com', '2021-08-02 06:08:00');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `chat_doctor`
 --
 
@@ -85,22 +110,37 @@ CREATE TABLE `chat_doctor` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `contact`
+--
+
+CREATE TABLE `contact` (
+  `id` int(11) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `fullname` varchar(255) NOT NULL,
+  `message` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `doctor`
 --
 
 CREATE TABLE `doctor` (
   `id` int(11) NOT NULL,
+  `id_user` int(3) DEFAULT NULL,
   `name` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `image` varchar(500) DEFAULT NULL,
   `age` int(3) NOT NULL,
-  `gender` int(1) NOT NULL,
   `phonenumber` int(11) NOT NULL,
   `experience` int(2) NOT NULL,
   `quotes` varchar(255) NOT NULL,
   `dayset` varchar(255) NOT NULL,
   `timeset` varchar(255) NOT NULL,
+  `price` int(11) DEFAULT NULL,
+  `address` varchar(255) NOT NULL,
   `date_time` datetime NOT NULL,
   `is_active` int(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
@@ -109,9 +149,8 @@ CREATE TABLE `doctor` (
 -- Dumping data for table `doctor`
 --
 
-INSERT INTO `doctor` (`id`, `name`, `email`, `password`, `image`, `age`, `gender`, `phonenumber`, `experience`, `quotes`, `dayset`, `timeset`, `date_time`, `is_active`) VALUES
-(12, 'Jelal Mystique Deran', 'jelal@gmail.com', '$2y$10$tBflwt4HTPSJ50d1oLTg4ehZE2CBZJ7BeojkoHwf6cXKpu26ATarC', 'd_62.jpg', 25, 1, 1234567890, 3, 'Life is never flat', '', '', '2021-07-24 06:07:47', 1),
-(13, 'Christina Violensia', 'chris@gmail.com', '$2y$10$KuTpPMb.sNi447EqWRVGkeD5RhVHY4GOP2YhPaXCYYSrAW4MIGmcS', 'd_5.jpg', 20, 0, 1234567890, 2, 'Life is never flat', '', '', '2021-07-25 03:07:26', 1);
+INSERT INTO `doctor` (`id`, `id_user`, `name`, `email`, `password`, `image`, `age`, `phonenumber`, `experience`, `quotes`, `dayset`, `timeset`, `price`, `address`, `date_time`, `is_active`) VALUES
+(19, NULL, 'Fransisca Olivia', 'frans@gmail.com', '$2y$10$Fc0ispVqAomPyJJu6.67Fu8.N7p2B6nPbF3/ZAkfDfh4EEMlsDnwO', 'pexels-thisisengineering-3861976.jpg', 24, 2147483647, 3, 'cweeeeeeewcwf c', 'mon - wed', '08:00 - 12:00', 32000, 'dadafcad', '2021-07-31 08:07:29', 1);
 
 -- --------------------------------------------------------
 
@@ -121,22 +160,26 @@ INSERT INTO `doctor` (`id`, `name`, `email`, `password`, `image`, `age`, `gender
 
 CREATE TABLE `event` (
   `id` int(11) NOT NULL,
+  `id_user` int(3) DEFAULT NULL,
   `topic` varchar(255) DEFAULT NULL,
   `speaker` varchar(255) NOT NULL,
-  `date` varchar(255) DEFAULT NULL,
+  `date` date DEFAULT NULL,
   `via` int(1) DEFAULT NULL,
   `price` int(11) NOT NULL,
   `speakerProfile` varchar(255) DEFAULT NULL,
   `thumbnail` varchar(255) DEFAULT NULL,
-  `descript` varchar(255) DEFAULT NULL
+  `descript` varchar(255) DEFAULT NULL,
+  `time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Dumping data for table `event`
 --
 
-INSERT INTO `event` (`id`, `topic`, `speaker`, `date`, `via`, `price`, `speakerProfile`, `thumbnail`, `descript`) VALUES
-(24, 'How to become hero', 'Andi Rifqial Nur', 'Sep, 11 2021', 1, 42000, '', '', 'fsfvstbvst');
+INSERT INTO `event` (`id`, `id_user`, `topic`, `speaker`, `date`, `via`, `price`, `speakerProfile`, `thumbnail`, `descript`, `time`) VALUES
+(31, NULL, 'Gemilang mu', 'aran', '2022-11-23', 1, 20000, 'p_5.jpg', 'event5_(2).jpg', 'This event is blablabla\r\n', '09:30:00'),
+(32, NULL, 'How to become hero', 'Venesa Feronica', '2021-08-27', 0, 20000, 'pexels-chokniti-khongchum-2280547.jpg', 'p_2.jpg', 'event ini  bertujuan agar anda tidak lagi malas-malasan dalam keseharian.', '09:00:00'),
+(33, NULL, 'sembarang', 'sembarang', '2021-08-25', 0, 20000, 'd_31.jpg', 'pexels-min-an-752831.jpg', 'Sembarang', '09:36:00');
 
 -- --------------------------------------------------------
 
@@ -146,9 +189,11 @@ INSERT INTO `event` (`id`, `topic`, `speaker`, `date`, `via`, `price`, `speakerP
 
 CREATE TABLE `eventregister` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `id_event` int(11) NOT NULL,
+  `eventname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
-  `quantity` int(11) NOT NULL
+  `topic` varchar(255) DEFAULT NULL,
+  `quantity` int(1) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -172,7 +217,8 @@ CREATE TABLE `test` (
 
 INSERT INTO `test` (`id`, `testname`, `descript`, `thumbnail`, `link`, `date`) VALUES
 (1, 'sembarang coba dulu', 'jnlndclakjdn al ldajeiowj ajfksdcadavsd', 'psytest1.jpg', 'https://facebook.com', '2021-07-24 04:07:28'),
-(2, 'SICD Test', 'jnkajd adjnc ajf kajsdn caouj vad advadcd', 'psytest2.jpg', 'https://facebook.com', '2021-07-24 04:07:39');
+(2, 'SICD Test', 'jnkajd adjnc ajf kajsdn caouj vad advadcd', 'psytest2.jpg', 'https://facebook.com', '2021-07-24 04:07:39'),
+(3, 'IQ Test', 'sembarang', 'pexels-fauxels-3183197.jpg', 'https://facebook.com', '2021-08-02 07:08:05');
 
 -- --------------------------------------------------------
 
@@ -187,7 +233,6 @@ CREATE TABLE `user` (
   `password` varchar(255) NOT NULL,
   `image` varchar(500) DEFAULT NULL,
   `age` int(3) DEFAULT NULL,
-  `gender` int(1) DEFAULT NULL,
   `phonenumber` varchar(255) DEFAULT NULL,
   `job` varchar(255) DEFAULT NULL,
   `address` varchar(255) DEFAULT NULL,
@@ -199,76 +244,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id`, `name`, `email`, `password`, `image`, `age`, `gender`, `phonenumber`, `job`, `address`, `date_time`, `is_active`) VALUES
-(93, 'wertyuiopasdfghjkl', 'adas@gmail.com', '$2y$10$jgw4RZTMjyT9qoJBXXmMSeOLlDXMOC2CNdnRegYqu2nJ2AmbTs0WK', 'eventcadangan1.jpg', 0, NULL, '', '', '', '2021-07-23 04:07:07', 1),
-(94, 'wertyuiopasdfghjkl', 'adas@gmail.com', '$2y$10$jgw4RZTMjyT9qoJBXXmMSeOLlDXMOC2CNdnRegYqu2nJ2AmbTs0WK', 'eventcadangan1.jpg', 0, NULL, '', '', '', '2021-07-23 04:07:51', 1),
-(95, 'wertyuiopasdfghjkl', 'adas@gmail.com', '$2y$10$jgw4RZTMjyT9qoJBXXmMSeOLlDXMOC2CNdnRegYqu2nJ2AmbTs0WK', 'eventcadangan1.jpg', 0, NULL, '', '', '', '2021-07-23 04:07:44', 1),
-(96, 'Gerald Gamirald', 'gerald@gmail.com', '$2y$10$PvoFiE4LcK8Dllr.maFl1uCqqrQAnCU3A0NL48.z1WlSq1Rmp0LQS', 'eventcadangan1.jpg', NULL, NULL, NULL, NULL, NULL, '2021-07-23 07:07:40', 1),
-(97, 'Andi Rifqial Nur', 'andirifqialnur276@gmail.com', '$2y$10$IXWNoj3i1Da8dHlIensdXOSEF3VWTo9gas/EgtE41cR60DtDozufK', 'eventcadangan1.jpg', NULL, NULL, NULL, NULL, NULL, '2021-07-23 09:07:16', 1),
-(98, 'Syahrir', 'muhsyahrir005@gmail.com', '$2y$10$Y35/6LmAo.MGmG4nY3xXIe7eeL94fSZAmkOgd6YHVP6/KrSc56uR.', 'eventcadangan1.jpg', NULL, NULL, NULL, NULL, NULL, '2021-07-23 09:07:58', 1),
-(99, 'Diana Victoria', 'diana@gmail.com', '$2y$10$NL5rlIShponwVSFZuRrYx.vgRlqDmK8gMakBap1zW8lfQpmCf3Yuu', 'eventcadangan1.jpg', NULL, NULL, NULL, NULL, NULL, '2021-07-24 05:07:39', 1),
-(100, 'Xavier Khandwald', 'xav@gmail.com', '$2y$10$19BcJgBnyRP2WLrl59RQreRhsJrlY9wPuvbdxF3v8XVBvt9WTLg76', 'eventcadangan1.jpg', NULL, NULL, NULL, NULL, NULL, '2021-07-24 05:07:21', 1);
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_menu`
---
-
-CREATE TABLE `user_menu` (
-  `id` int(11) NOT NULL,
-  `menu` varchar(128) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_menu`
---
-
-INSERT INTO `user_menu` (`id`, `menu`) VALUES
-(1, 'Admin'),
-(2, 'User');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_role`
---
-
-CREATE TABLE `user_role` (
-  `id` int(11) NOT NULL,
-  `role` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_role`
---
-
-INSERT INTO `user_role` (`id`, `role`) VALUES
-(1, 'Admin'),
-(2, 'Patient'),
-(3, 'Doctor');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `user_sub_menu`
---
-
-CREATE TABLE `user_sub_menu` (
-  `id` int(11) NOT NULL,
-  `menu_id` int(11) NOT NULL,
-  `title` varchar(128) NOT NULL,
-  `url` varchar(128) NOT NULL,
-  `icon` varchar(128) NOT NULL,
-  `is_active` int(1) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `user_sub_menu`
---
-
-INSERT INTO `user_sub_menu` (`id`, `menu_id`, `title`, `url`, `icon`, `is_active`) VALUES
-(1, 1, 'Dashboard', 'Dashboard', 'fas fa-fw fa-tachometer-alt', 1);
+INSERT INTO `user` (`id`, `name`, `email`, `password`, `image`, `age`, `phonenumber`, `job`, `address`, `date_time`, `is_active`) VALUES
+(101, 'Andi Rifqial', 'andirifqialnur276@gmail.com', '$2y$10$Y589tEhY9160TgS9Y2H7LOGUIM2WKWcEIMchD6liU9oik3hN62Th6', 'pexels-pixabay-236302.jpg', 23, '09812049', 'smebaknf', 'saelkdmlakmfakldcecvsx', '2021-07-26 02:07:41', 1),
+(111, 'Daniel Khanwald Nicholas', 'dan@gmail.com', '$2y$10$xAXsq5tg1Y1o7P/PsDOyU.zVrXNTc2fdij7IQaabo3Yu6bL20RG16', 'pexels-ali-arapoğlu-26520881.jpg', 21, '085263563381', 'smebarang', '', '2021-07-31 01:07:15', 1);
 
 --
 -- Indexes for dumped tables
@@ -287,28 +265,43 @@ ALTER TABLE `article`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `chatted`
+--
+ALTER TABLE `chatted`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `chat_doctor`
 --
 ALTER TABLE `chat_doctor`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `contact`
+--
+ALTER TABLE `contact`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `doctor`
 --
 ALTER TABLE `doctor`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `event`
 --
 ALTER TABLE `event`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_user` (`id_user`);
 
 --
 -- Indexes for table `eventregister`
 --
 ALTER TABLE `eventregister`
-  ADD PRIMARY KEY (`id`);
+  ADD PRIMARY KEY (`id`),
+  ADD KEY `id_event` (`id_event`);
 
 --
 -- Indexes for table `test`
@@ -323,24 +316,6 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user_menu`
---
-ALTER TABLE `user_menu`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user_role`
---
-ALTER TABLE `user_role`
-  ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `user_sub_menu`
---
-ALTER TABLE `user_sub_menu`
-  ADD PRIMARY KEY (`id`);
-
---
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -348,7 +323,7 @@ ALTER TABLE `user_sub_menu`
 -- AUTO_INCREMENT for table `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `article`
@@ -357,22 +332,34 @@ ALTER TABLE `article`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `chatted`
+--
+ALTER TABLE `chatted`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `chat_doctor`
 --
 ALTER TABLE `chat_doctor`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `contact`
+--
+ALTER TABLE `contact`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `doctor`
 --
 ALTER TABLE `doctor`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- AUTO_INCREMENT for table `event`
 --
 ALTER TABLE `event`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=25;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 
 --
 -- AUTO_INCREMENT for table `eventregister`
@@ -384,31 +371,35 @@ ALTER TABLE `eventregister`
 -- AUTO_INCREMENT for table `test`
 --
 ALTER TABLE `test`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=112;
 
 --
--- AUTO_INCREMENT for table `user_menu`
+-- Constraints for dumped tables
 --
-ALTER TABLE `user_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `user_role`
+-- Constraints for table `doctor`
 --
-ALTER TABLE `user_role`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `doctor`
+  ADD CONSTRAINT `doctor_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
 
 --
--- AUTO_INCREMENT for table `user_sub_menu`
+-- Constraints for table `event`
 --
-ALTER TABLE `user_sub_menu`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+ALTER TABLE `event`
+  ADD CONSTRAINT `event_ibfk_1` FOREIGN KEY (`id_user`) REFERENCES `user` (`id`);
+
+--
+-- Constraints for table `eventregister`
+--
+ALTER TABLE `eventregister`
+  ADD CONSTRAINT `eventregister_ibfk_1` FOREIGN KEY (`id_event`) REFERENCES `event` (`id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
